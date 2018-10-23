@@ -6,14 +6,16 @@
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="/assets/js/trianglify.js"></script>
+    <script src="/assets/js/graph-scroll.js"></script>
     <script src="/assets/js/main.js"></script>
 </head>
 <body>
 {% include header.html%}
-
+<div class="hero-body">
 {{ content }}
-
+</div>
 {% include footer.html %}
 </body>
 </html>

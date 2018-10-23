@@ -2,10 +2,23 @@
 layout: default
 title: IDEA
 ---
-<div id="js-nav-hide-point"></div>
-Принципы построения энергосистем в архитектуре IDEA
 
-{% for section in site.sections %}
-<h2>{{ section.title }}</h2>
-<p>{{ section.content }}</p>
-{% endfor %}
+{% include three-columns.html %}
+
+<div class="columns">
+    <div class="column is-4" id="sections">
+        {% for section in site.sections %}
+        <section class="section">
+            <h2>{{ section.title }}</h2>
+            <p>{{ section.content }}</p>
+        </section>
+        {% endfor %}
+    </div>
+    <div class="column">
+        Интеллектуальной: должна быть обеспечена легкость интеграции (plug&play) энергетических устройств пользователей в контуры роботизированного управления различных сервисов;
+    </div>
+</div>
+
+<div id="js-nav-hide-point"></div>
+
+

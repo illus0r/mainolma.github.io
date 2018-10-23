@@ -3388,7 +3388,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 /* SCSS Variables */
 .header {
   height: 100vh;
-  min-height: 300px; }
+  min-height: 500px; }
   .header .header-top {
     padding: 40px; }
   .header .lang {

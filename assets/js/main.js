@@ -1,18 +1,25 @@
 
 
-document.addEventListener("DOMContentLoaded", ready);
-window.addEventListener("resize", ready);
+document.addEventListener("DOMContentLoaded", init);
+window.addEventListener("resize", updateCanvas);
 
-function ready() {
+function init() {
+    updateCanvas();
+    initScroll();
+}
+
+function updateCanvas() {
     var canvas = document.getElementsByTagName("canvas")[0];
     if (canvas) canvas.remove();
     var header = document.getElementsByClassName("header")[0];
+    var height = header.clientHeight;
+    var width = header.clientWidth;
     var pattern = Trianglify({
-        height: header.clientHeight,
+        height: height,
+        width: width,
         variance:0,
         seed:'eyjbc',
         x_colors:'GnBu',
-        width: header.clientWidth,
         cell_size: 80});
     header.insertBefore(pattern.canvas(),header.firstChild);
 }
@@ -34,4 +41,11 @@ $(window).on('scroll', function () {
         $('.header-links').removeClass('hidden-header');
     }*/
 });
+
+function initScroll() {
+    d3.graphScroll()
+        .sections(d3.selectAll('#sections > section'))
+        .on('active', function(i){
+            console.log(i + 'th section active') })
+}
 
