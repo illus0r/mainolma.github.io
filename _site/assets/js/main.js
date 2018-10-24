@@ -4,8 +4,11 @@ document.addEventListener("DOMContentLoaded", init);
 window.addEventListener("resize", updateCanvas);
 
 function init() {
+
     updateCanvas();
-    initScroll();
+
+    drawGraph()
+
 }
 
 function updateCanvas() {
@@ -44,8 +47,62 @@ $(window).on('scroll', function () {
 
 function initScroll() {
     d3.graphScroll()
-        .sections(d3.selectAll('#sections > section'))
+        .sections(d3.selectAll('#sections > div'))
         .on('active', function(i){
-            console.log(i + 'th section active') })
+            console.log(i)
+            var ident=d3.select("div.graph-scroll-active").attr("id");
+            console.log(ident)
+            //$("g#Scheme").show();
+            $("g#"+ident).show("slow", function () {
+                console.log(ident)
+            });
+            //changeScheme(ident)
+        })
+        .graph(d3.select('#graph'))
+        .container(d3.select('#scroll-container'))
+        .offset(300)
+}
+
+function drawGraph() {
+    var width = 620,
+        height = 562,
+        r = 40
+
+    var graph = d3.select('#graph')
+        .append('svg')
+        .attrs({width: width, height: height});
+    var svg = d3.select('#graph svg');
+
+
+
+    d3.xml("assets/images/Scheme.svg").then(function(documentFragment,error) {
+        if (error) {console.log(error); return;}
+
+        var svgNode = documentFragment
+            .getElementsByTagName("svg")[0];
+        //use plain Javascript to extract the node
+
+        svg.node().appendChild(svgNode);
+        //d3's selection.node() returns the DOM node, so we
+        //can use plain Javascript to append content
+
+        $("g#Scheme > ").hide("slow",function () {
+            console.log("hide")
+        });
+        initScroll();
+    });
+
+
+}
+
+function changeScheme(ident) {
+    $("g#Scheme").show();
+    var main_chart_svg = d3.select('#graph svg')
+    var innerSVG = main_chart_svg.select("svg");
+    var active_group=innerSVG.select("g#"+ident)
+     $("g#"+ident).show("slow", function () {
+          console.log(ident)
+     });
+
 }
 

@@ -5,17 +5,19 @@ title: IDEA
 
 {% include three-columns.html %}
 
-<div class="columns">
+<div class="columns" id='scroll-container'>
     <div class="column is-4" id="sections">
         {% for section in site.sections %}
+        <div id={{ section.ident }}>
         <section class="section">
             <h2>{{ section.title }}</h2>
             <p>{{ section.content }}</p>
         </section>
+        </div>
         {% endfor %}
     </div>
     <div class="column">
-        Интеллектуальной: должна быть обеспечена легкость интеграции (plug&play) энергетических устройств пользователей в контуры роботизированного управления различных сервисов;
+        <div id='graph'></div>
     </div>
 </div>
 

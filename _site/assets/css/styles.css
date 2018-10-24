@@ -3453,3 +3453,18 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   display: flex;
   flex-direction: column;
   justify-content: center; }
+
+#scroll-container {
+  position: relative; }
+  #scroll-container #sections > div {
+    opacity: 0.2; }
+  #scroll-container #sections div.graph-scroll-active {
+    opacity: 1; }
+  #scroll-container #graph {
+    margin-left: 40px;
+    width: 50%;
+    height: 500px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: calc(50% - 200px);
+    border: 1px solid #dbdbdb; }

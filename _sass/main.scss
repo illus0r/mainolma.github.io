@@ -95,5 +95,25 @@
   justify-content: center;
 }
 
+#scroll-container {
+  position: relative;
 
+  #sections {
+    > div {
+      opacity: $opacity-l;
+    }
+    div.graph-scroll-active {
+      opacity: $opacity-none;
+    }
+  }
 
+  #graph {
+    margin-left: 40px;
+    width: 50%;
+    height: 500px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: calc(50% - 200px);
+    border: 1px solid $border;
+  }
+}
