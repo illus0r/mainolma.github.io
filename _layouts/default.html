@@ -13,9 +13,11 @@
     <script src="/assets/js/main.js"></script>
 </head>
 <body>
-{% include header.html%}
+<div class="header">
+    {% include header.html%}
+</div>
 <div class="hero-body">
-{{ content }}
+    {{ content }}
 </div>
 {% include footer.html %}
 </body>

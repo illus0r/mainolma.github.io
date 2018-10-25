@@ -51,7 +51,6 @@ function initScroll() {
         .on('active', function(i){
             console.log(i)
             var ident=d3.select("div.graph-scroll-active").attr("id");
-            console.log(ident)
             //$("g#Scheme").show();
             $("g#"+ident).show("slow", function () {
                 console.log(ident)

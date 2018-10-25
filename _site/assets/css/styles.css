@@ -1,3 +1,4 @@
+@import url(manrope/font.css);
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
 @keyframes spinAround {
   from {
@@ -3386,9 +3387,17 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   box-shadow: none !important; }
 
 /* SCSS Variables */
+body {
+  font-family: "Manrope",sans-serif; }
+
+.hero-body {
+  max-width: 1472px;
+  margin: 0 auto; }
+
 .header {
   height: 100vh;
-  min-height: 500px; }
+  min-height: 500px;
+  max-height: 805px; }
   .header .header-top {
     padding: 40px; }
   .header .lang {
@@ -3444,7 +3453,10 @@ a.has-text-danger:hover, a.has-text-danger:focus {
     .header .header-bottom .headhesive--stick {
       display: block; }
   .header .columns {
-    padding: 40px; }
+    max-width: 1472px;
+    margin: 0 auto;
+    height: 100vh;
+    max-height: 805px; }
   .header canvas {
     position: absolute;
     z-index: -1; }

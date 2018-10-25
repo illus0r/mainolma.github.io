@@ -1,6 +1,14 @@
+body {
+  font-family: $family-manrope;
+}
+.hero-body{
+  max-width: $fullhd;
+  margin: 0 auto;
+}
 .header {
   height: 100vh;
   min-height: 500px;
+  max-height: $height-of-head;
 
   .header-top{
     padding: $offset-xxl;
@@ -80,7 +88,11 @@
   }
 
   .columns{
-    padding: $offset-xxl;
+    //padding: $offset-xxl;
+    max-width: $fullhd;
+    margin: 0 auto;
+    height: 100vh;
+    max-height: $height-of-head;
   }
 
   canvas{

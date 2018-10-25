@@ -1,6 +1,9 @@
 - name: Whitepaper
   link: /
+  hide-on-mobile: false
 - name: Telegram
   link: /
+  hide-on-mobile: true
 - name: Medium
   link: /
+  hide-on-mobile: true
