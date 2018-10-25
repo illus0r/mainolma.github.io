@@ -1,10 +1,10 @@
 /* SCSS Variables */
 
 //breackpoints
-$mobile375: 375px !default;
-$mobile456: 456px !default;
-$mobile550: 550px !default;
-$mobile667: 667px !default;
+$mobile375: 376px !default;
+$mobile456: 457px !default;
+$mobile550: 551px !default;
+$mobile667: 668px !default;
 
 @mixin mobile375 {
   @media screen and (max-width: $mobile375 +1px) {

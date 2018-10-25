@@ -3399,14 +3399,14 @@ body {
   max-height: 805px; }
   .header .header-top {
     padding: 32px; }
-    @media screen and (max-width: 668px) {
+    @media screen and (max-width: 667px) {
       .header .header-top {
         padding: 16px; } }
   .header .lang {
     font-size: 36px; }
-    @media screen and (max-width: 668px) {
+    @media screen and (max-width: 667px) {
       .header .lang {
-        font-size: 30px; } }
+        font-size: 22px; } }
     .header .lang a {
       color: #FFF;
       text-decoration: underline; }
@@ -3417,7 +3417,7 @@ body {
     color: #FFF;
     font-size: 36px;
     padding: 0 40px; }
-    @media screen and (max-width: 668px) {
+    @media screen and (max-width: 667px) {
       .header .header-bottom {
         font-size: 22px;
         padding: 0 16px; } }
@@ -3428,14 +3428,14 @@ body {
       margin-top: 40px;
       padding: 18px 0;
       border-top: 1px solid rgba(255, 255, 255, 0.5); }
-      @media screen and (max-width: 668px) {
+      @media screen and (max-width: 667px) {
         .header .header-bottom .header-links {
           font-size: 14px; } }
       .header .header-bottom .header-links a {
-        margin-left: 40px;
+        margin-left: 32px;
         text-decoration: underline;
         vertical-align: -moz-middle-with-baseline; }
-        @media screen and (max-width: 668px) {
+        @media screen and (max-width: 667px) {
           .header .header-bottom .header-links a {
             margin-left: 0; } }
       .header .header-bottom .header-links span {
@@ -3474,15 +3474,26 @@ body {
 
 #scroll-container {
   position: relative; }
+  @media screen and (max-width: 667px) {
+    #scroll-container {
+      display: flex;
+      flex-direction: column-reverse; } }
   #scroll-container #sections > div {
     opacity: 0.2; }
   #scroll-container #sections div.graph-scroll-active {
     opacity: 1; }
   #scroll-container #graph {
-    margin-left: 40px;
-    width: 50%;
-    height: 500px;
     position: sticky;
-    position: -webkit-sticky;
-    top: calc(50% - 200px);
-    border: 1px solid #dbdbdb; }
+    top: 50%; }
+  @media screen and (max-width: 667px) {
+    #scroll-container #graph-container {
+      position: sticky;
+      top: 50px;
+      background: #FFF; } }
+
+@media screen and (max-width: 667px) {
+  .is-hidden-mobile667 {
+    display: none !important; } }
+@media screen and (max-width: 375px) {
+  .is-hidden-mobile375 {
+    display: none !important; } }

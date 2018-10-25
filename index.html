@@ -5,8 +5,8 @@ title: IDEA
 
 {% include three-columns.html %}
 
-<div class="columns" id='scroll-container'>
-    <div class="column is-4" id="sections">
+<div id='scroll-container' class="columns">
+    <div id="sections" class="column is-half-desktop if-full-mobile">
         {% for section in site.sections %}
         <div id={{ section.ident }}>
         <section class="section">
@@ -16,9 +16,10 @@ title: IDEA
         </div>
         {% endfor %}
     </div>
-    <div class="column">
-        <div id='graph'></div>
+    <div id="graph-container" class="column  is-half-desktop if-full-mobile">
+        <div id="graph" ></div>
     </div>
+
 </div>
 
 <div id="js-nav-hide-point"></div>
