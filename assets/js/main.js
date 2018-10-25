@@ -46,30 +46,34 @@ $(window).on('scroll', function () {
 });
 
 function initScroll() {
+    var offset;
+    if (window.clientWidth>667)  offset= 300
+    else  offset= 200
+    console.log(offset);
     d3.graphScroll()
         .sections(d3.selectAll('#sections > div'))
         .on('active', function(i){
-            console.log(i)
+            console.log(i+1)
             var ident=d3.select("div.graph-scroll-active").attr("id");
-            //$("g#Scheme").show();
             $("g#"+ident).show("slow", function () {
                 console.log(ident)
             });
-            //changeScheme(ident)
         })
         .graph(d3.select('#graph'))
         .container(d3.select('#scroll-container'))
-        .offset(300)
+        .offset(offset)
 }
 
 function drawGraph() {
-    var width = 620,
-        height = 562,
+
+
+    var width = d3.select("#graph-container").node().getBoundingClientRect().width,
+        height = "40vh",
         r = 40
 
     var graph = d3.select('#graph')
         .append('svg')
-        .attrs({width: width, height: height});
+        .attrs({width: width, height: height, viewBox:"0 0 620 562", preserveAspectRatio:"xMidYMin slice"});
     var svg = d3.select('#graph svg');
 
 
@@ -85,9 +89,7 @@ function drawGraph() {
         //d3's selection.node() returns the DOM node, so we
         //can use plain Javascript to append content
 
-        $("g#Scheme > ").hide("slow",function () {
-            console.log("hide")
-        });
+        $("g#Scheme > ").hide();
         initScroll();
     });
 
