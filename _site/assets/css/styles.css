@@ -1,5 +1,4 @@
 @import url(manrope/font.css);
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
 @keyframes spinAround {
   from {
     transform: rotate(0deg); }
@@ -3388,7 +3387,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 
 /* SCSS Variables */
 body {
-  font-family: "Manrope",sans-serif; }
+  font-family: "Manrope", sans-serif; }
 
 .hero-body {
   max-width: 1472px;
@@ -3399,10 +3398,13 @@ body {
   min-height: 500px;
   max-height: 805px; }
   .header .header-top {
-    padding: 40px; }
+    padding: 32px; }
+    @media screen and (max-width: 668px) {
+      .header .header-top {
+        padding: 16px; } }
   .header .lang {
     font-size: 36px; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 668px) {
       .header .lang {
         font-size: 30px; } }
     .header .lang a {
@@ -3415,9 +3417,10 @@ body {
     color: #FFF;
     font-size: 36px;
     padding: 0 40px; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 668px) {
       .header .header-bottom {
-        font-size: 22px; } }
+        font-size: 22px;
+        padding: 0 16px; } }
     .header .header-bottom a {
       color: #FFF; }
     .header .header-bottom .header-links {
@@ -3425,13 +3428,16 @@ body {
       margin-top: 40px;
       padding: 18px 0;
       border-top: 1px solid rgba(255, 255, 255, 0.5); }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 668px) {
         .header .header-bottom .header-links {
           font-size: 14px; } }
       .header .header-bottom .header-links a {
         margin-left: 40px;
         text-decoration: underline;
         vertical-align: -moz-middle-with-baseline; }
+        @media screen and (max-width: 668px) {
+          .header .header-bottom .header-links a {
+            margin-left: 0; } }
       .header .header-bottom .header-links span {
         vertical-align: -moz-middle-with-baseline; }
       .header .header-bottom .header-links .mail {

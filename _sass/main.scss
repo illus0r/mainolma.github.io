@@ -1,5 +1,5 @@
 body {
-  font-family: $family-manrope;
+  font-family: $font-family-manrope;
 }
 .hero-body{
   max-width: $fullhd;
@@ -11,12 +11,15 @@ body {
   max-height: $height-of-head;
 
   .header-top{
-    padding: $offset-xxl;
+    padding: $offset-xl;
+    @include mobile667 {
+      padding: $offset-l;
+    }
   }
 
   .lang{
     font-size: $font-size-xxl;
-    @include mobile {
+    @include mobile667 {
       font-size: $font-size-xl;
     }
     a{
@@ -33,8 +36,9 @@ body {
     color: $color-white;
     font-size: $font-size-xxl;
     padding: 0 $offset-xxl;
-    @include mobile {
+    @include mobile667 {
       font-size: $font-size-m;
+      padding: 0 $offset-l;
     }
 
     a {
@@ -47,7 +51,7 @@ body {
       padding: 18px 0;
       border-top: 1px solid rgba(255, 255, 255, 0.5);
 
-      @include mobile {
+      @include mobile667 {
         font-size: $font-size-s;
       }
 
@@ -55,6 +59,9 @@ body {
           margin-left: $offset-xxl;
           text-decoration: underline;
           vertical-align: -moz-middle-with-baseline;
+          @include mobile667 {
+            margin-left: 0;
+          }
         }
 
       span{

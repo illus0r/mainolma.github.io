@@ -1,5 +1,29 @@
 /* SCSS Variables */
 
+//breackpoints
+$mobile375: 375px !default;
+$mobile456: 456px !default;
+$mobile550: 550px !default;
+$mobile667: 667px !default;
+
+@mixin mobile375 {
+  @media screen and (max-width: $mobile375 +1px) {
+    @content
+  }
+}
+
+@mixin mobile456 {
+  @media screen and (max-width: $mobile456 + 1px) {
+    @content
+  }
+}
+
+@mixin mobile667 {
+  @media screen and (max-width: $mobile667 + 1px) {
+    @content
+  }
+}
+
 // structure
 
 $height-of-head: 805px;
@@ -58,7 +82,7 @@ $color-overlay: $color-black;
 
 // font-family
 
-$family-manrope: "Manrope",sans-serif;
+$font-family-manrope: "Manrope",sans-serif;
 
 
 // font
@@ -71,7 +95,7 @@ $font-size-s:14px;
 $font-h1-line-height:           36px;
 
 $font-h1-size:                  32px;
-$font-h1:                       bold $font-h1-size / $font-h1-line-height $font-family-monospace;
+$font-h1:                       bold $font-h1-size / $font-h1-line-height $font-family-manrope;
 
 
 // shadow
