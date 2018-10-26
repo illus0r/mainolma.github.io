@@ -8,8 +8,8 @@ body {
 }
 
 .header {
-  min-height: 100vh;
-  //min-height: 500px;
+  height: 100vh;
+  min-height: 500px;
   max-height: $height-of-head;
 
   .header-top {
@@ -55,7 +55,7 @@ body {
     .header-links {
       font-size: $font-size-m;
       margin-top: $offset-xxl;
-      padding: 18px 0;
+      padding: $offset-l 0;
       border-top: 1px solid rgba(255, 255, 255, 0.5);
 
       @include until($mobile667) {
@@ -95,8 +95,11 @@ body {
       display: none;
       will-change: transform,background;
       max-width: none!important;
-      padding: 18px 40px;
+      padding: $offset-l $offset-xxl;
       margin-top: 0;
+      @include until($mobile667) {
+        padding: $offset-l;
+      }
     }
     .headhesive--stick {
       display: block;
@@ -115,6 +118,8 @@ body {
   canvas{
     position: absolute;
     z-index: -1;
+    top: -1px;
+    left: 0;
   }
 }
 
@@ -165,4 +170,12 @@ body {
 
 @include until($mobile375){
   .is-hidden-mobile375{
+    display: none !important}}
+
+@include until($mobile456){
+  .is-hidden-mobile456{
+    display: none !important}}
+
+@include until($desktop1440){
+  .is-hidden-desktop1440{
     display: none !important}}

@@ -2,9 +2,10 @@
 
 //breackpoints
 $mobile375: 376px !default;
-$mobile456: 457px !default;
+$mobile456: 456px !default;
 $mobile550: 551px !default;
 $mobile667: 668px !default;
+$desktop1440: 1441px !default;
 
 @mixin mobile375 {
   @media screen and (max-width: $mobile375 +1px) {

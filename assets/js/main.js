@@ -1,18 +1,23 @@
 
 document.addEventListener("DOMContentLoaded", init);
-window.addEventListener("resize", updateCanvas);
+window.addEventListener("resize",  function(){
+    updateCanvas("canvas-main", "header");
+    updateCanvas("canvas-sticky", "headhesive");
+});
 
 function init() {
-    updateCanvas();
+    updateCanvas("canvas-main", "header");
     drawGraph()
 }
 
-function updateCanvas() {
-    var canvas = document.getElementsByTagName("canvas")[0];
+function updateCanvas(canvasName, divName) {
+    var canvas = document.querySelector("div."+divName+" #"+canvasName);
     if (canvas) canvas.remove();
-    var header = document.getElementsByClassName("header")[0];
+    var header =  document.getElementsByClassName(divName)[0];
+    //console.log(header.clientHeight)
     var height = header.clientHeight;
     var width = header.clientWidth;
+    if (height!=0){
     var pattern = Trianglify({
         height: height,
         width: width,
@@ -21,13 +26,15 @@ function updateCanvas() {
         x_colors:'GnBu',
         cell_size: 80});
     header.insertBefore(pattern.canvas(),header.firstChild);
+    header.getElementsByTagName("canvas")[0].id=canvasName}
+
 }
 
 $(window).on('scroll', function () {
     if (window.pageYOffset >= $('.header-links').offset().top) {
         $('.headhesive').removeClass('headhesive--unstick').addClass('headhesive--stick');
         setTimeout(function () {
-            $('.headhesive').css('background', '#020D45');
+            updateCanvas("canvas-sticky", "headhesive");
         }, 10);
     } else {
         $('.headhesive').css('background', 'transparent').removeClass('headhesive--stick').addClass('headhesive--unstick');
@@ -43,7 +50,7 @@ $(window).on('scroll', function () {
 
 function initScroll() {
     var offset;
-    if (window.clientWidth>667)  offset= 300;  else  offset= 200
+    if (window.clientWidth>667)  offset= 400;  else  offset= 200
     console.log("sections offset = "+offset);
     d3.graphScroll()
         .sections(d3.selectAll('#sections > div'))

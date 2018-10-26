@@ -2,17 +2,18 @@
     <span class="is-hidden-mobile667">Узнайте больше:</span>
 
     {% for item in site.data.navigation %}
-    <a href="{{ item.link }}"  {% if item.hide-on-mobile %}class="is-hidden-mobile667"{% endif %} {% if page.url == item.link %}class="current"{% endif %}>
+    <a href="{{ item.link }}"  {% if item.hide-on-mobile %}class="is-hidden-desktop1440"{% endif %} {% if page.url == item.link %}class="current"{% endif %}>
         {{ item.name }}
     </a>
     {% endfor %}
     <div class="is-pulled-right mail">info@ideaproject.tech</div>
 </div>
 <div class="headhesive header-links">
-    <span  class="is-hidden-mobile667">Узнайте больше:</span>
+    <img src="/assets/images/IDE.svg" class="is-hidden-mobile456">
+    <img src="/assets/images/logo.svg" class="is-hidden-mobile456">
 
     {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" {% if item.hide-on-mobile %}class="is-hidden-mobile667"{% endif %}>
+    <a href="{{ item.link }}" {% if item.hide-on-mobile %}class="is-hidden-desktop1440"{% endif %}>
         {{ item.name }}
     </a>
     {% endfor %}
