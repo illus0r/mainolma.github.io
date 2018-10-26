@@ -1,14 +1,10 @@
 
-
 document.addEventListener("DOMContentLoaded", init);
 window.addEventListener("resize", updateCanvas);
 
 function init() {
-
     updateCanvas();
-
     drawGraph()
-
 }
 
 function updateCanvas() {
@@ -47,17 +43,12 @@ $(window).on('scroll', function () {
 
 function initScroll() {
     var offset;
-    if (window.clientWidth>667)  offset= 300
-    else  offset= 200
-    console.log(offset);
+    if (window.clientWidth>667)  offset= 300;  else  offset= 200
+    console.log("sections offset = "+offset);
     d3.graphScroll()
         .sections(d3.selectAll('#sections > div'))
         .on('active', function(i){
-            console.log(i+1)
-            var ident=d3.select("div.graph-scroll-active").attr("id");
-            $("g#"+ident).show("slow", function () {
-                console.log(ident)
-            });
+            changeScheme(i)
         })
         .graph(d3.select('#graph'))
         .container(d3.select('#scroll-container'))
@@ -65,45 +56,28 @@ function initScroll() {
 }
 
 function drawGraph() {
-
-
     var width = d3.select("#graph-container").node().getBoundingClientRect().width,
-        height = "40vh",
-        r = 40
-
+        height = "40vh"
     var graph = d3.select('#graph')
         .append('svg')
         .attrs({width: width, height: height, viewBox:"0 0 620 562", preserveAspectRatio:"xMidYMin slice"});
     var svg = d3.select('#graph svg');
 
-
-
     d3.xml("assets/images/Scheme.svg").then(function(documentFragment,error) {
         if (error) {console.log(error); return;}
-
         var svgNode = documentFragment
             .getElementsByTagName("svg")[0];
-        //use plain Javascript to extract the node
-
         svg.node().appendChild(svgNode);
-        //d3's selection.node() returns the DOM node, so we
-        //can use plain Javascript to append content
-
         $("g#Scheme > ").hide();
         initScroll();
     });
-
-
 }
 
-function changeScheme(ident) {
-    $("g#Scheme").show();
-    var main_chart_svg = d3.select('#graph svg')
-    var innerSVG = main_chart_svg.select("svg");
-    var active_group=innerSVG.select("g#"+ident)
-     $("g#"+ident).show("slow", function () {
-          console.log(ident)
-     });
-
+function changeScheme(i) {
+    console.log("active section №"+(i+1))
+    var ident=d3.select("div.graph-scroll-active").attr("id");
+    $("g#"+ident).show("slow", function () {
+        console.log("show group #"+ident)
+    });
 }
 

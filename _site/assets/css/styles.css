@@ -3394,8 +3394,7 @@ body {
   margin: 0 auto; }
 
 .header {
-  height: 100vh;
-  min-height: 500px;
+  min-height: 100vh;
   max-height: 805px; }
   .header .header-top {
     padding: 32px; }
@@ -3417,9 +3416,13 @@ body {
     color: #FFF;
     font-size: 36px;
     padding: 0 40px; }
-    @media screen and (max-width: 667px) {
+    @media screen and (max-width: 1087px) {
       .header .header-bottom {
         font-size: 22px;
+        padding: 0 16px; } }
+    @media screen and (max-width: 375px) {
+      .header .header-bottom {
+        font-size: 16px;
         padding: 0 16px; } }
     .header .header-bottom a {
       color: #FFF; }
@@ -3430,7 +3433,7 @@ body {
       border-top: 1px solid rgba(255, 255, 255, 0.5); }
       @media screen and (max-width: 667px) {
         .header .header-bottom .header-links {
-          font-size: 14px; } }
+          font-size: 16px; } }
       .header .header-bottom .header-links a {
         margin-left: 32px;
         text-decoration: underline;
@@ -3443,8 +3446,11 @@ body {
       .header .header-bottom .header-links .mail {
         background: #FCDB00;
         border-radius: 2px;
-        padding: 6px 14px;
+        padding: 4px 16px;
         color: #4A6568; }
+        @media screen and (max-width: 667px) {
+          .header .header-bottom .header-links .mail {
+            padding: 2px 8px; } }
     .header .header-bottom .headhesive {
       position: fixed;
       top: 0;

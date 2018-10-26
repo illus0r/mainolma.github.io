@@ -51,19 +51,8 @@ $offset-container: $offset-s;
 $offset-component: $offset-m;
 $offset-component-inside: $offset-s;
 $offset-page: $offset-xl;
-
-// border-radius
-
-$border-radius-xs: 1px;
-$border-radius-m: 2px;
-$border-radius-l: 4px;
-$border-radius-l: 6px;
-
-// animation-duration
-
-$animation-duration-s: 100;
-$animation-duration-m: 200;
-$animation-duration-l: 400;
+$offset-link-m: $offset-s $offset-l;
+$offset-link-s: $offset-xs $offset-m;
 
 // color
 
@@ -80,6 +69,7 @@ $color-interactive: $color-blue;
 $color-caution: $color-red;
 $color-overlay: $color-black;
 
+
 // font-family
 
 $font-family-manrope: "Manrope",sans-serif;
@@ -90,7 +80,7 @@ $font-family-manrope: "Manrope",sans-serif;
 $font-size-xxl:36px;
 $font-size-xl:30px;
 $font-size-m:22px;
-$font-size-s:14px;
+$font-size-s:16px;
 
 $font-h1-line-height:           36px;
 
@@ -98,7 +88,10 @@ $font-h1-size:                  32px;
 $font-h1:                       bold $font-h1-size / $font-h1-line-height $font-family-manrope;
 
 
-// shadow
+// border radius
 
-$shadow-inner-m: inset 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
-$shadow-outer-m: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+// border-radius
+
+$border-radius-xs: 1px;
+$border-radius-m: 2px;
+$border-radius-l: 4px;

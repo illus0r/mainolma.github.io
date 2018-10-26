@@ -1,33 +1,35 @@
 body {
   font-family: $font-family-manrope;
 }
-.hero-body{
+
+.hero-body {
   max-width: $fullhd;
   margin: 0 auto;
 }
+
 .header {
-  height: 100vh;
-  min-height: 500px;
+  min-height: 100vh;
+  //min-height: 500px;
   max-height: $height-of-head;
 
-  .header-top{
+  .header-top {
     padding: $offset-xl;
     @include until($mobile667) {
       padding: $offset-l;
     }
   }
 
-  .lang{
+  .lang {
     font-size: $font-size-xxl;
     @include until($mobile667) {
       font-size: $font-size-m;
     }
 
-    a{
+    a {
       color: $color-white;
       text-decoration: underline;
     }
-    span{
+    span {
       color: $color-gray-dark;
     }
   }
@@ -37,8 +39,12 @@ body {
     color: $color-white;
     font-size: $font-size-xxl;
     padding: 0 $offset-xxl;
-    @include until($mobile667) {
+    @include until($desktop) {
       font-size: $font-size-m;
+      padding: 0 $offset-l;
+    }
+    @include until($mobile375) {
+      font-size: $font-size-s;
       padding: 0 $offset-l;
     }
 
@@ -56,24 +62,27 @@ body {
         font-size: $font-size-s;
       }
 
-        a{
-          margin-left: $offset-xl;
-          text-decoration: underline;
-          vertical-align: -moz-middle-with-baseline;
-          @include  until($mobile667)  {
-            margin-left: 0;
-          }
+      a {
+        margin-left: $offset-xl;
+        text-decoration: underline;
+        vertical-align: -moz-middle-with-baseline;
+        @include until($mobile667) {
+          margin-left: 0;
         }
+      }
 
-      span{
+      span {
         vertical-align: -moz-middle-with-baseline;
       }
 
-      .mail{
+      .mail {
         background: $color-yellow;
         border-radius: $border-radius-m;
-        padding: 6px 14px;
+        padding: $offset-link-m;
         color: $color-gray-dark;
+        @include until($mobile667) {
+          padding:$offset-link-s;
+        }
       }
 
     }
@@ -109,15 +118,19 @@ body {
   }
 }
 
+//Vertical align of content
+
 .column.has-vertically-aligned-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+//Graph Scroll
+
 #scroll-container {
   position: relative;
-  @include  until($mobile667)  {
+  @include until($mobile667) {
     display: flex;
     flex-direction: column-reverse;
   }
@@ -134,12 +147,12 @@ body {
   #graph {
     position: sticky;
     top: 30%;
-      }
+  }
 
-  #graph-container{
-    @include  until($mobile667)  {
+  #graph-container {
+    @include until($mobile667) {
       position: sticky;
-      top:50px;
+      top: 50px;
       background: $color-white;
     }
   }
