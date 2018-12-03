@@ -67,7 +67,7 @@ function drawGraph() {
         height = "40vh"
     var graph = d3.select('#graph')
         .append('svg')
-        .attrs({width: width, height: height, viewBox:"0 0 620 562", preserveAspectRatio:"xMidYMin slice"});
+        .attrs({width: width, height: height, viewBox:"0 0 640 619", preserveAspectRatio:"xMidYMin meet"});
     var svg = d3.select('#graph svg');
 
     d3.xml("assets/images/Scheme.svg").then(function(documentFragment,error) {
@@ -75,7 +75,7 @@ function drawGraph() {
         var svgNode = documentFragment
             .getElementsByTagName("svg")[0];
         svg.node().appendChild(svgNode);
-        $("g#Scheme > ").hide();
+        $("g#Scheme6_2 > ").hide();
         initScroll();
     });
 }
