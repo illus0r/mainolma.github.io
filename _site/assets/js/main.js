@@ -50,7 +50,12 @@ $(window).on('scroll', function () {
 
 function initScroll() {
     var offset;
-    if (window.clientWidth>667)  offset= 400;  else  offset= 200
+    var scrollHeight = Math.max(document.documentElement.clientHeight
+    );
+
+    console.log( 'Высота с учетом прокрутки: ' + scrollHeight );
+
+    if (scrollHeight<667)  offset= 200;  else  offset= 600
     console.log("sections offset = "+offset);
     d3.graphScroll()
         .sections(d3.selectAll('#sections > div'))
