@@ -104,12 +104,29 @@ function changeScheme(i) {
     $("div.graph-scroll-active").attr("class", "graph-scroll-active show");
     var sections = d3.selectAll("div.show,div.hide");
     sections.each(function (section) {
+
             if (d3.select(this).classed("show"))
+
                 $("g#" + d3.select(this).attr("id")).show("fast", function () {
+                    console.log( d3.select("g#"+d3.select(this).attr("id")).attr("id"))
+
+                        d3.select("g#" + d3.select(this).attr("id"))
+                            .transition()
+                            .duration(1000)
+                            .ease(d3.easeBounce)
+                            .attr("transform", "translate(0,10)")
+
+
                     console.log("show group #" + d3.select(this).attr("id"))
-                })
+                });
+
             if (d3.select(this).classed("hide"))
                 $("g#" + d3.select(this).attr("id")).hide("fast", function () {
+                    d3.select("g#" + d3.select(this).attr("id"))
+                        .transition()
+                        .duration(1000)
+                        .ease(d3.easeBounce)
+                        .attr("transform", "translate(0,-10)")
                     console.log("hide group #" + d3.select(this).attr("id"))
                 })
         }
