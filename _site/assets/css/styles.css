@@ -3496,7 +3496,7 @@ body {
     opacity: 1; }
   #scroll-container #graph {
     position: sticky;
-    top: 30%; }
+    top: 10%; }
   @media screen and (max-width: 667px) {
     #scroll-container #graph-container {
       position: sticky;

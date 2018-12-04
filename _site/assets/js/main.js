@@ -50,12 +50,11 @@ $(window).on('scroll', function () {
 
 function initScroll() {
     var offset;
-    var scrollHeight = Math.max(document.documentElement.clientHeight
-    );
+    var scrollWidth = document.documentElement.clientWidth;
 
-    console.log( 'Высота с учетом прокрутки: ' + scrollHeight );
+    console.log( 'Ширина с учетом прокрутки: ' + scrollWidth );
 
-    if (scrollHeight<667)  offset= 200;  else  offset= 600
+    if (scrollWidth<667)  offset= 200;  else  offset= 300
     console.log("sections offset = "+offset);
     d3.graphScroll()
         .sections(d3.selectAll('#sections > div'))
@@ -69,7 +68,7 @@ function initScroll() {
 
 function drawGraph() {
     var width = d3.select("#graph-container").node().getBoundingClientRect().width,
-        height = "40vh"
+        height = "90vh"
     var graph = d3.select('#graph')
         .append('svg')
         .attrs({width: width, height: height, viewBox:"0 0 640 619", preserveAspectRatio:"xMidYMin meet"});
@@ -87,9 +86,21 @@ function drawGraph() {
 
 function changeScheme(i) {
     console.log("active section №"+(i+1))
-    var ident=d3.select("div.graph-scroll-active").attr("id");
-    $("g#"+ident).show("slow", function () {
-        console.log("show group #"+ident)
-    });
+    $( "div.graph-scroll-active" ).prevAll().attr("class","show");
+    $( "div.graph-scroll-active" ).nextAll().attr("class","hide");
+    $( "div.graph-scroll-active" ).attr("class","graph-scroll-active show");
+    var sections=d3.selectAll("div.show,div.hide");
+    sections.each(function (section) {
+        if (d3.select(this).classed("show"))
+            $("g#" + d3.select(this).attr("id")).show("fast", function () {
+                console.log("show group #" + d3.select(this).attr("id"))
+            })
+     if (d3.select(this).classed("hide"))
+                $("g#" + d3.select(this).attr("id")).hide("fast", function () {
+                    console.log("hide group #" + d3.select(this).attr("id"))
+                })
+    }
+    )
+
 }
 
