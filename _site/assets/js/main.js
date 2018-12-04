@@ -106,7 +106,6 @@ function changeScheme(i) {
     sections.each(function (section) {
 
             if (d3.select(this).classed("show"))
-
                 $("g#" + d3.select(this).attr("id")).show("fast", function () {
                     console.log( d3.select("g#"+d3.select(this).attr("id")).attr("id"))
 
@@ -115,7 +114,6 @@ function changeScheme(i) {
                             .duration(1000)
                             .ease(d3.easeBounce)
                             .attr("transform", "translate(0,10)")
-
 
                     console.log("show group #" + d3.select(this).attr("id"))
                 });
@@ -127,6 +125,7 @@ function changeScheme(i) {
                         .duration(1000)
                         .ease(d3.easeBounce)
                         .attr("transform", "translate(0,-10)")
+
                     console.log("hide group #" + d3.select(this).attr("id"))
                 })
         }
