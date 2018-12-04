@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", init);
 window.addEventListener("resize",  function(){
     updateCanvas("canvas-main", "header");
     updateCanvas("canvas-sticky", "headhesive");
+
 });
 
 function init() {
@@ -67,8 +68,8 @@ function initScroll() {
 }
 
 function drawGraph() {
-    var width = d3.select("#graph-container").node().getBoundingClientRect().width,
-        height = "90vh"
+    var width = d3.select("#graph-container").node().getBoundingClientRect().width
+    var height = (document.documentElement.clientWidth>667) ? "90vh" : "50vh"
     var graph = d3.select('#graph')
         .append('svg')
         .attrs({width: width, height: height, viewBox:"0 0 640 619", preserveAspectRatio:"xMidYMin meet"});
@@ -85,22 +86,21 @@ function drawGraph() {
 }
 
 function changeScheme(i) {
-    console.log("active section №"+(i+1))
-    $( "div.graph-scroll-active" ).prevAll().attr("class","show");
-    $( "div.graph-scroll-active" ).nextAll().attr("class","hide");
-    $( "div.graph-scroll-active" ).attr("class","graph-scroll-active show");
-    var sections=d3.selectAll("div.show,div.hide");
+    console.log("active section №" + (i + 1))
+    $("div.graph-scroll-active").prevAll().attr("class", "show");
+    $("div.graph-scroll-active").nextAll().attr("class", "hide");
+    $("div.graph-scroll-active").attr("class", "graph-scroll-active show");
+    var sections = d3.selectAll("div.show,div.hide");
     sections.each(function (section) {
-        if (d3.select(this).classed("show"))
-            $("g#" + d3.select(this).attr("id")).show("fast", function () {
-                console.log("show group #" + d3.select(this).attr("id"))
-            })
-     if (d3.select(this).classed("hide"))
+            if (d3.select(this).classed("show"))
+                $("g#" + d3.select(this).attr("id")).show("fast", function () {
+                    console.log("show group #" + d3.select(this).attr("id"))
+                })
+            if (d3.select(this).classed("hide"))
                 $("g#" + d3.select(this).attr("id")).hide("fast", function () {
                     console.log("hide group #" + d3.select(this).attr("id"))
                 })
-    }
+        }
     )
-
 }
 
