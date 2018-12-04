@@ -6,17 +6,17 @@ title: IDEA
 {% include three-columns.html %}
 
 <div id='scroll-container' class="columns">
-    <div id="sections" class="column is-4-desktop is-4-tablet is-full-mobile">
+    <div id="sections" class="column is-4-desktop is-4-tablet is-full-ourmobile">
         {% for section in site.sections %}
         <div id={{ section.ident }}>
         <section class="section">
-            <h2>{{ section.title }}</h2>
+           <!-- <h2>{{ section.title }}</h2>-->
             <p>{{ section.content }}</p>
         </section>
         </div>
         {% endfor %}
     </div>
-    <div id="graph-container" class="column  is-8-desktop is-8-tablet is-full-mobile">
+    <div id="graph-container" class="column  is-8-desktop is-8-tablet is-full-ourmobile">
         <div id="graph" ></div>
     </div>
 

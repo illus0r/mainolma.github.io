@@ -31,7 +31,7 @@
             var isBelow1 = pageYOffset > belowStart
             if (isBelow != isBelow1){
                 isBelow = isBelow1
-                container.classed('graph-scroll-below', isBelow)
+                //container.classed('graph-scroll-below', isBelow)
             }
             var isFixed1 = !isBelow && pageYOffset > containerStart
             if (isFixed != isFixed1){

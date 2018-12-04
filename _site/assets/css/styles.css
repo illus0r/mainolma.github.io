@@ -3385,6 +3385,11 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 .is-shadowless {
   box-shadow: none !important; }
 
+@media screen and (max-width: 456px) {
+  .columns.is-full-ourmobile {
+    flex: none;
+    width: 100%; } }
+
 /* SCSS Variables */
 body {
   font-family: "Manrope", sans-serif; }
@@ -3485,7 +3490,8 @@ body {
   justify-content: center; }
 
 #scroll-container {
-  position: relative; }
+  position: relative;
+  padding-bottom: 200px; }
   @media screen and (max-width: 667px) {
     #scroll-container {
       display: flex;
@@ -3497,7 +3503,7 @@ body {
   #scroll-container #graph {
     position: sticky;
     top: 10%; }
-  @media screen and (max-width: 667px) {
+  @media screen and (max-width: 455px) {
     #scroll-container #graph-container {
       position: sticky;
       top: 50px;

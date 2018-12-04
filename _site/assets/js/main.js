@@ -3,12 +3,24 @@ document.addEventListener("DOMContentLoaded", init);
 window.addEventListener("resize",  function(){
     updateCanvas("canvas-main", "header");
     updateCanvas("canvas-sticky", "headhesive");
-
+    updateSvg()
+});
+window.addEventListener("orientationchange", function() {
+    //alert("the orientation of the device is now " + screen.orientation.angle);
+    updateSvg()
 });
 
 function init() {
     updateCanvas("canvas-main", "header");
     drawGraph()
+}
+
+function updateSvg() {
+    var width = d3.select("#graph-container").node().getBoundingClientRect().width
+    var height = (document.documentElement.clientWidth>456) ? "90vh" : "50vh"
+    d3.select('#graph')
+        .select('svg')
+        .attrs({width: width, height: height, viewBox:"0 0 640 619", preserveAspectRatio:"xMidYMin meet"});
 }
 
 function updateCanvas(canvasName, divName) {
@@ -55,7 +67,7 @@ function initScroll() {
 
     console.log( 'Ширина с учетом прокрутки: ' + scrollWidth );
 
-    if (scrollWidth<667)  offset= 200;  else  offset= 300
+    if (scrollWidth<667)  offset= 200;  else  offset= document.documentElement.clientHeight/3
     console.log("sections offset = "+offset);
     d3.graphScroll()
         .sections(d3.selectAll('#sections > div'))
