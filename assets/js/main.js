@@ -13,6 +13,9 @@ window.addEventListener("orientationchange", function() {
 function init() {
     updateCanvas("canvas-main", "header");
     drawGraph()
+    $('#graph').click(function(e){
+        $('#graph').toggleClass('fullscreen');
+    });
 }
 
 function updateSvg() {
@@ -104,31 +107,26 @@ function changeScheme(i) {
     $("div.graph-scroll-active").attr("class", "graph-scroll-active show");
     var sections = d3.selectAll("div.show,div.hide");
     sections.each(function (section) {
+        var group_id = d3.select(this).attr("id")
+        if (d3.select(this).classed("show"))
+            d3.select("g#" + group_id)
+                .transition()
+                .duration(1000)
+                .ease(d3.easeQuadIn)
+                .attr("opacity", 1)
+                .style("display", null)
+                .attr("transform", "translate(0,10)")
 
-            if (d3.select(this).classed("show"))
-                $("g#" + d3.select(this).attr("id")).show("fast", function () {
-                    console.log( d3.select("g#"+d3.select(this).attr("id")).attr("id"))
+        if (d3.select(this).classed("hide"))
+            d3.select("g#" + group_id)
+                .transition()
+                .duration(200)
+                .ease(d3.easeQuadIn)
+                .attr("opacity", 0)
+                .transition()
+                .attr("transform", "translate(0,-10)")
+                .style("display", "none")
 
-                        d3.select("g#" + d3.select(this).attr("id"))
-                            .transition()
-                            .duration(1000)
-                            .ease(d3.easeBounce)
-                            .attr("transform", "translate(0,10)")
-
-                    console.log("show group #" + d3.select(this).attr("id"))
-                });
-
-            if (d3.select(this).classed("hide"))
-                $("g#" + d3.select(this).attr("id")).hide("fast", function () {
-                    d3.select("g#" + d3.select(this).attr("id"))
-                        .transition()
-                        .duration(1000)
-                        .ease(d3.easeBounce)
-                        .attr("transform", "translate(0,-10)")
-
-                    console.log("hide group #" + d3.select(this).attr("id"))
-                })
-        }
-    )
+    })
 }
 

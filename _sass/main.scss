@@ -155,6 +155,15 @@ body {
   #graph {
     position: sticky;
     top: 10%;
+    }
+  #graph.fullscreen{
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $color-white;
   }
 
   #graph-container {
