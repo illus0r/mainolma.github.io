@@ -2,6 +2,10 @@ body {
   font-family: $font-family-manrope;
 }
 
+span.te{color: $color-te; font-weight: bold;}
+span.iot{color: $color-iot; font-weight: bold;}
+span.ng{color: $color-ng; font-weight: bold;}
+
 .hero-body {
   max-width: $fullhd;
   margin: 0 auto;
@@ -144,7 +148,7 @@ body {
   #sections {
 
     > div {
-      opacity: $opacity-l;
+      opacity: $opacity-none;
     }
     div.graph-scroll-active {
       opacity: $opacity-none;

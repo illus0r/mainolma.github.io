@@ -3394,6 +3394,18 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 body {
   font-family: "Manrope", sans-serif; }
 
+span.te {
+  color: #FFA800;
+  font-weight: bold; }
+
+span.iot {
+  color: #0099DC;
+  font-weight: bold; }
+
+span.ng {
+  color: #FF8282;
+  font-weight: bold; }
+
 .hero-body {
   max-width: 1472px;
   margin: 0 auto; }
@@ -3497,7 +3509,7 @@ body {
       display: flex;
       flex-direction: column-reverse; } }
   #scroll-container #sections > div {
-    opacity: 0.2; }
+    opacity: 1; }
   #scroll-container #sections div.graph-scroll-active {
     opacity: 1; }
   #scroll-container #graph {
