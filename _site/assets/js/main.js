@@ -70,7 +70,7 @@ function initScroll() {
 
     console.log( 'Ширина с учетом прокрутки: ' + scrollWidth );
 
-    if (scrollWidth<667)  offset= 200;  else  offset= document.documentElement.clientHeight/3
+    if (scrollWidth<667)  offset= 200;  else  offset= document.documentElement.clientHeight/2-20
     console.log("sections offset = "+offset);
     d3.graphScroll()
         .sections(d3.selectAll('#sections > div'))
@@ -108,14 +108,26 @@ function changeScheme(i) {
     var sections = d3.selectAll("div.show,div.hide");
     sections.each(function (section) {
         var group_id = d3.select(this).attr("id")
-        if (d3.select(this).classed("show"))
-            d3.select("g#" + group_id)
-                .transition()
-                .duration(100)
-                .ease(d3.easeQuadIn)
-                .attr("opacity", 1)
-                .style("display", null)
-                .attr("transform", "translate(0,10)")
+        if (d3.select(this).classed("show")) {
+            if (group_id ==("triangle" || "te_highlight" || "iot_highlight" || "ng_highlight"))
+                d3.select("g#" + group_id)
+                    .attr("transform", "translate(0,10)")
+                    //.transition()
+                    //.duration(100)
+                    //.ease(d3.easeQuadIn)
+                    .attr("opacity", 1)
+                    .style("display", null)
+
+            else {
+                d3.select("g#" + group_id)
+                    .transition()
+                    .duration(100)
+                    .ease(d3.easeQuadIn)
+                    .attr("opacity", 1)
+                    .style("display", null)
+                    .attr("transform", "translate(0,10)")
+            }
+        }
 
         if (d3.select(this).classed("hide"))
             d3.select("g#" + group_id)

@@ -153,6 +153,9 @@ span.ng{color: $color-ng; font-weight: bold;}
     div.graph-scroll-active {
       opacity: $opacity-none;
     }
+    div.hide{
+      opacity: $opacity-l;
+    }
 
   }
 

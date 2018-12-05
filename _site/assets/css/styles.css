@@ -3512,6 +3512,8 @@ span.ng {
     opacity: 1; }
   #scroll-container #sections div.graph-scroll-active {
     opacity: 1; }
+  #scroll-container #sections div.hide {
+    opacity: 0.2; }
   #scroll-container #graph {
     position: sticky;
     top: 10%; }
