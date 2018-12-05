@@ -13,9 +13,6 @@ window.addEventListener("orientationchange", function() {
 function init() {
     updateCanvas("canvas-main", "header");
     drawGraph()
-    $('#graph').click(function(e){
-        $('#graph').toggleClass('fullscreen');
-    });
 }
 
 function updateSvg() {
@@ -70,7 +67,7 @@ function initScroll() {
 
     console.log( 'Ширина с учетом прокрутки: ' + scrollWidth );
 
-    if (scrollWidth<667)  offset= 200;  else  offset= document.documentElement.clientHeight/2-20
+    if (scrollWidth<667)  offset= 200;  else  offset= document.documentElement.clientHeight/2
     console.log("sections offset = "+offset);
     d3.graphScroll()
         .sections(d3.selectAll('#sections > div'))
@@ -84,7 +81,7 @@ function initScroll() {
 
 function drawGraph() {
     var width = d3.select("#graph-container").node().getBoundingClientRect().width
-    var height = (document.documentElement.clientWidth>667) ? "90vh" : "50vh"
+    var height = (document.documentElement.clientWidth>456) ? "90vh" : "50vh"
     var graph = d3.select('#graph')
         .append('svg')
         .attrs({width: width, height: height, viewBox:"0 0 640 619", preserveAspectRatio:"xMidYMin meet"});
@@ -98,6 +95,10 @@ function drawGraph() {
         $("g#Scheme6_2 > ").hide();
         initScroll();
     });
+    //fullscreen scheme by click
+    /*$('#graph').click(function(e){
+        $('#graph').toggleClass('fullscreen');
+    });*/
 }
 
 function changeScheme(i) {

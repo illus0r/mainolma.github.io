@@ -140,7 +140,7 @@ span.ng{color: $color-ng; font-weight: bold;}
 #scroll-container {
   position: relative;
   padding-bottom:200px; ;
-  @include until($mobile667) {
+  @include until($mobile456) {
     display: flex;
     flex-direction: column-reverse;
   }
@@ -156,7 +156,15 @@ span.ng{color: $color-ng; font-weight: bold;}
     div.hide{
       opacity: $opacity-l;
     }
-
+    @include until($mobile667) {
+      padding: 0;
+    }
+    section{
+      @include until($mobile667) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
   }
 
   #graph {
