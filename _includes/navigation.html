@@ -2,9 +2,8 @@
     <span class="is-hidden-mobile667">Узнайте больше:</span>
 
     {% for item in site.data.navigation %}
-    <a href="{{ item.link }}"
-       {% if item.hide-on-mobile %} class="is-hidden-desktop1440"{% endif %}
-       <!--{% if page.url == item.link %} class="current"{% endif %}-->>
+    <a href="{{ item.link }}" {% if item.hide-on-mobile %} class="is-hidden-desktop1440"{% endif %}>
+       <!--{% if page.url == item.link %} class="current"{% endif %}-->
         {{ item.name }}
     </a>
     {% endfor %}
