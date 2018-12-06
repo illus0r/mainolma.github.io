@@ -157,6 +157,8 @@ span.ng{color: $color-ng; font-weight: bold;}
       display: block;
     }
 
+    .hidden-header{display: none}
+
   }
 
   .columns{
@@ -187,7 +189,7 @@ span.ng{color: $color-ng; font-weight: bold;}
 
 #scroll-container {
   position: relative;
-  padding-bottom:200px; ;
+  padding-bottom:100px; ;
   @include until($mobile456) {
     display: flex;
     flex-direction: column-reverse;

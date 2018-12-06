@@ -52,13 +52,13 @@ $(window).on('scroll', function () {
     } else {
         $('.headhesive').css('background', 'transparent').removeClass('headhesive--stick').addClass('headhesive--unstick');
     }
-/*
-    var offsetForHide = $('#js-nav-hide-point').offset().top - $('.header-links').height() - 50;
+
+    var offsetForHide = $('#js-nav-hide-point').offset().top - $('.header-links').height() ;
     if (window.pageYOffset >= offsetForHide) {
         $('.header-links').addClass('hidden-header');
     } else {
         $('.header-links').removeClass('hidden-header');
-    }*/
+    }
 });
 
 function initScroll() {

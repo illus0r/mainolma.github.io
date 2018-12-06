@@ -3520,6 +3520,8 @@ span.ng {
         float: left; }
     .header .header-bottom .headhesive--stick {
       display: block; }
+    .header .header-bottom .hidden-header {
+      display: none; }
   .header .columns {
     max-width: 1472px;
     margin: 0 auto;
@@ -3538,7 +3540,7 @@ span.ng {
 
 #scroll-container {
   position: relative;
-  padding-bottom: 200px; }
+  padding-bottom: 100px; }
   @media screen and (max-width: 455px) {
     #scroll-container {
       display: flex;
