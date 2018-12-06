@@ -7,15 +7,19 @@
     </a>
     {% endfor %}
     <div class="is-pulled-right mail">info@ideaproject.tech</div>
+    <div class="is-pulled-right brands is-hidden-mobile456">
+        <a href=""><i class="fab fa-medium"></i></a>
+        <a href=""> <i class="fab fa-telegram"></i></a>
+    </div>
 </div>
 <div class="headhesive header-links">
-    <img src="/assets/images/IDE.svg" class="is-hidden-mobile456">
-    <img src="/assets/images/logo.svg" class="is-hidden-mobile456">
+    <img src="/assets/images/tmp/logo.svg" class="is-hidden-mobile456 logo">
 
     {% for item in site.data.navigation %}
     <a href="{{ item.link }}" {% if item.hide-on-mobile %}class="is-hidden-desktop1440"{% endif %}>
         {{ item.name }}
     </a>
     {% endfor %}
+
     <div class="is-pulled-right mail">info@ideaproject.tech</div>
 </div>

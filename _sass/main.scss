@@ -13,7 +13,7 @@ span.ng{color: $color-ng; font-weight: bold;}
 
 .header {
   height: 100vh;
-  min-height: 375px;
+  min-height: 320px;
   max-height: $height-of-head;
 
   .header-top {
@@ -79,10 +79,11 @@ span.ng{color: $color-ng; font-weight: bold;}
         margin-top: $offset-l;
       }
 
-      a {
+      >a {
         margin-left: $offset-xl;
         text-decoration: underline;
         vertical-align: -moz-middle-with-baseline;
+        line-height: 36px;
         @include until($mobile667) {
           margin-left: 0;
         }
@@ -96,11 +97,24 @@ span.ng{color: $color-ng; font-weight: bold;}
         background: $color-yellow;
         border-radius: $border-radius-l;
         padding: $offset-link-m;
-        color: $color-gray-dark;
+        height: 100%;
+        color: $color-green-dark;
         @include until($mobile667) {
           padding:$offset-link-s;
         }
       }
+
+      .brands{
+          font-size: $font-size-xm;
+          margin-top: -$offset-s ;
+        i{
+          margin-right: $offset-l;
+        }
+        @include from($mobile667) {
+          display: none;
+        }
+        }
+
 
     }
     .headhesive {
@@ -110,12 +124,19 @@ span.ng{color: $color-ng; font-weight: bold;}
       width: 100%!important;
       z-index: 100;
       display: none;
+      height: 64px;
       will-change: transform,background;
       max-width: none!important;
       padding: $offset-l $offset-xxl;
       margin-top: 0;
       @include until($desktop1440) {
         padding: $offset-m;
+        height: 54px;
+      }
+
+      .logo {
+        margin-right: $offset-sxl;
+        float: left;
       }
 
     }

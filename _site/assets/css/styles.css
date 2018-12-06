@@ -3412,7 +3412,7 @@ span.ng {
 
 .header {
   height: 100vh;
-  min-height: 375px;
+  min-height: 320px;
   max-height: 805px; }
   .header .header-top {
     padding: 32px; }
@@ -3465,23 +3465,33 @@ span.ng {
       @media screen and (max-width: 667px) {
         .header .header-bottom .header-links {
           margin-top: 16px; } }
-      .header .header-bottom .header-links a {
+      .header .header-bottom .header-links > a {
         margin-left: 32px;
         text-decoration: underline;
-        vertical-align: -moz-middle-with-baseline; }
+        vertical-align: -moz-middle-with-baseline;
+        line-height: 36px; }
         @media screen and (max-width: 667px) {
-          .header .header-bottom .header-links a {
+          .header .header-bottom .header-links > a {
             margin-left: 0; } }
       .header .header-bottom .header-links span {
         vertical-align: -moz-middle-with-baseline; }
       .header .header-bottom .header-links .mail {
         background: #FCDB00;
         border-radius: 4px;
-        padding: 4px 16px;
-        color: #4A6568; }
+        padding: 6px 16px;
+        height: 100%;
+        color: #4B6569; }
         @media screen and (max-width: 667px) {
           .header .header-bottom .header-links .mail {
-            padding: 2px 8px; } }
+            padding: 6px 8px; } }
+      .header .header-bottom .header-links .brands {
+        font-size: 24px;
+        margin-top: -4px; }
+        .header .header-bottom .header-links .brands i {
+          margin-right: 16px; }
+        @media screen and (min-width: 668px) {
+          .header .header-bottom .header-links .brands {
+            display: none; } }
     .header .header-bottom .headhesive {
       position: fixed;
       top: 0;
@@ -3489,13 +3499,18 @@ span.ng {
       width: 100% !important;
       z-index: 100;
       display: none;
+      height: 64px;
       will-change: transform,background;
       max-width: none !important;
       padding: 16px 40px;
       margin-top: 0; }
       @media screen and (max-width: 1440px) {
         .header .header-bottom .headhesive {
-          padding: 8px; } }
+          padding: 8px;
+          height: 54px; } }
+      .header .header-bottom .headhesive .logo {
+        margin-right: 24px;
+        float: left; }
     .header .header-bottom .headhesive--stick {
       display: block; }
   .header .columns {

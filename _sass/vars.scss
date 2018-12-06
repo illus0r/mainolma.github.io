@@ -50,16 +50,19 @@ $opacity-xxl:  0.04;
 
 $offset-xs:  2px;
 $offset-s:   4px;
+$offset-xm:  6px;
 $offset-m:   8px;
+  $offset-ml:  12px;
 $offset-l:  16px;
 $offset-xl: 32px;
 $offset-xxl: 40px;
+  $offset-sxl:  24px;
 $offset-container: $offset-s;
 $offset-component: $offset-m;
 $offset-component-inside: $offset-s;
 $offset-page: $offset-xl;
-$offset-link-m: $offset-s $offset-l;
-$offset-link-s: $offset-xs $offset-m;
+$offset-link-m: $offset-xm $offset-l;
+$offset-link-s: $offset-xm $offset-m;
 
 // color
 
@@ -67,6 +70,7 @@ $color-white: #FFF;
 $color-gray-light: #DFDFDF;
 $color-gray: #ADADAD;
 $color-gray-dark: #4A6568;
+$color-green-dark: #4B6569;
 $color-black: #000;
 $color-red: #FC121B;
 $color-blue: #1AA5B8;
@@ -92,6 +96,7 @@ $font-family-manrope: "Manrope",sans-serif;
 $font-size-xxl:36px;
 $font-size-xl:30px;
 $font-size-m:22px;
+$font-size-xm:24px;
 $font-size-s:16px;
 $font-size-xs:8px;
 
