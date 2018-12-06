@@ -13,6 +13,12 @@ $desktop1440: 1441px !default;
   }
 }
 
+@mixin mobile375-landscape {
+  @media screen and (max-width: 568px) and (orientation : landscape) {
+    @content
+  }
+}
+
 @mixin mobile456 {
   @media screen and (max-width: $mobile456 + 1px) {
     @content
@@ -87,6 +93,7 @@ $font-size-xxl:36px;
 $font-size-xl:30px;
 $font-size-m:22px;
 $font-size-s:16px;
+$font-size-xs:8px;
 
 $font-h1-line-height:           36px;
 

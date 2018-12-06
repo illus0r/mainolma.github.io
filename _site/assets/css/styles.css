@@ -3412,10 +3412,13 @@ span.ng {
 
 .header {
   height: 100vh;
-  min-height: 500px;
+  min-height: 375px;
   max-height: 805px; }
   .header .header-top {
     padding: 32px; }
+    @media screen and (max-width: 1440px) {
+      .header .header-top {
+        padding: 16px; } }
     @media screen and (max-width: 667px) {
       .header .header-top {
         padding: 16px; } }
@@ -3438,10 +3441,15 @@ span.ng {
       .header .header-bottom {
         font-size: 22px;
         padding: 0 16px; } }
+    @media screen and (max-width: 667px) {
+      .header .header-bottom {
+        font-size: 22px; } }
     @media screen and (max-width: 375px) {
       .header .header-bottom {
-        font-size: 16px;
-        padding: 0 16px; } }
+        font-size: 16px; } }
+    @media screen and (max-width: 568px) and (orientation: landscape) {
+      .header .header-bottom {
+        font-size: 16px; } }
     .header .header-bottom a {
       color: #FFF; }
     .header .header-bottom .header-links {
@@ -3449,9 +3457,14 @@ span.ng {
       margin-top: 40px;
       padding: 16px 0;
       border-top: 1px solid rgba(255, 255, 255, 0.5); }
+      @media screen and (max-width: 1440px) {
+        .header .header-bottom .header-links {
+          font-size: 16px;
+          margin-top: 32px;
+          padding: 8px 0; } }
       @media screen and (max-width: 667px) {
         .header .header-bottom .header-links {
-          font-size: 16px; } }
+          margin-top: 16px; } }
       .header .header-bottom .header-links a {
         margin-left: 32px;
         text-decoration: underline;
@@ -3463,7 +3476,7 @@ span.ng {
         vertical-align: -moz-middle-with-baseline; }
       .header .header-bottom .header-links .mail {
         background: #FCDB00;
-        border-radius: 2px;
+        border-radius: 4px;
         padding: 4px 16px;
         color: #4A6568; }
         @media screen and (max-width: 667px) {
@@ -3480,9 +3493,9 @@ span.ng {
       max-width: none !important;
       padding: 16px 40px;
       margin-top: 0; }
-      @media screen and (max-width: 667px) {
+      @media screen and (max-width: 1440px) {
         .header .header-bottom .headhesive {
-          padding: 16px; } }
+          padding: 8px; } }
     .header .header-bottom .headhesive--stick {
       display: block; }
   .header .columns {

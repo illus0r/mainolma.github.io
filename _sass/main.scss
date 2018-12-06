@@ -13,11 +13,14 @@ span.ng{color: $color-ng; font-weight: bold;}
 
 .header {
   height: 100vh;
-  min-height: 500px;
+  min-height: 375px;
   max-height: $height-of-head;
 
   .header-top {
     padding: $offset-xl;
+    @include until($desktop1440) {
+      padding: $offset-l;
+    }
     @include until($mobile667) {
       padding: $offset-l;
     }
@@ -47,9 +50,14 @@ span.ng{color: $color-ng; font-weight: bold;}
       font-size: $font-size-m;
       padding: 0 $offset-l;
     }
+    @include until($mobile667) {
+      font-size: $font-size-m;
+    }
     @include until($mobile375) {
       font-size: $font-size-s;
-      padding: 0 $offset-l;
+    }
+    @include mobile375-landscape{
+      font-size: $font-size-s;
     }
 
     a {
@@ -62,8 +70,13 @@ span.ng{color: $color-ng; font-weight: bold;}
       padding: $offset-l 0;
       border-top: 1px solid rgba(255, 255, 255, 0.5);
 
-      @include until($mobile667) {
+      @include until($desktop1440) {
         font-size: $font-size-s;
+        margin-top: $offset-xl;
+        padding: $offset-m 0;
+      }
+      @include until($mobile667) {
+        margin-top: $offset-l;
       }
 
       a {
@@ -81,7 +94,7 @@ span.ng{color: $color-ng; font-weight: bold;}
 
       .mail {
         background: $color-yellow;
-        border-radius: $border-radius-m;
+        border-radius: $border-radius-l;
         padding: $offset-link-m;
         color: $color-gray-dark;
         @include until($mobile667) {
@@ -101,9 +114,10 @@ span.ng{color: $color-ng; font-weight: bold;}
       max-width: none!important;
       padding: $offset-l $offset-xxl;
       margin-top: 0;
-      @include until($mobile667) {
-        padding: $offset-l;
+      @include until($desktop1440) {
+        padding: $offset-m;
       }
+
     }
     .headhesive--stick {
       display: block;
