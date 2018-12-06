@@ -3552,10 +3552,12 @@ span.ng {
   @media screen and (max-width: 667px) {
     #scroll-container #sections {
       padding: 0; } }
-  @media screen and (max-width: 667px) {
-    #scroll-container #sections section {
-      padding-left: 0;
-      padding-right: 0; } }
+  #scroll-container #sections .section {
+    padding: 3rem 0; }
+    @media screen and (max-width: 667px) {
+      #scroll-container #sections .section {
+        padding-left: 0;
+        padding-right: 0; } }
   #scroll-container #graph {
     position: sticky;
     top: 10%; }
