@@ -3485,11 +3485,10 @@ span.ng {
           .header .header-bottom .header-links .mail {
             padding: 6px 8px; } }
       .header .header-bottom .header-links .brands {
-        font-size: 24px;
-        margin-top: -4px; }
+        font-size: 24px; }
         .header .header-bottom .header-links .brands i {
           margin-right: 16px; }
-        @media screen and (min-width: 668px) {
+        @media screen and (min-width: 1441px) {
           .header .header-bottom .header-links .brands {
             display: none; } }
     .header .header-bottom .headhesive {
@@ -3506,10 +3505,9 @@ span.ng {
       margin-top: 0; }
       @media screen and (max-width: 1440px) {
         .header .header-bottom .headhesive {
-          padding: 8px;
+          padding: 8px 16px;
           height: 54px; } }
       .header .header-bottom .headhesive .logo {
-        margin-right: 24px;
         float: left; }
     .header .header-bottom .headhesive--stick {
       display: block; }

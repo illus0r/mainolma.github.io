@@ -106,11 +106,11 @@ span.ng{color: $color-ng; font-weight: bold;}
 
       .brands{
           font-size: $font-size-xm;
-          margin-top: -$offset-s ;
+          //margin-top: -$offset-s ;
         i{
           margin-right: $offset-l;
         }
-        @include from($mobile667) {
+        @include from($desktop1440) {
           display: none;
         }
         }
@@ -130,12 +130,12 @@ span.ng{color: $color-ng; font-weight: bold;}
       padding: $offset-l $offset-xxl;
       margin-top: 0;
       @include until($desktop1440) {
-        padding: $offset-m;
+        padding: $offset-m $offset-l;
         height: 54px;
       }
 
       .logo {
-        margin-right: $offset-sxl;
+        //margin-right: $offset-sxl;
         float: left;
       }
 
