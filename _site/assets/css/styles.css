@@ -3392,7 +3392,8 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 
 /* SCSS Variables */
 body {
-  font-family: "Manrope", sans-serif; }
+  font-family: "Manrope", sans-serif;
+  font-size: 20px; }
 
 span.te {
   color: #FFA800;
@@ -3409,6 +3410,11 @@ span.ng {
 .hero-body {
   max-width: 1472px;
   margin: 0 auto; }
+  .hero-body h1 {
+    font-size: 36px;
+    margin-bottom: 32px; }
+  .hero-body h2 {
+    font-weight: bold; }
 
 .header {
   height: 100vh;
@@ -3505,8 +3511,11 @@ span.ng {
       margin-top: 0; }
       @media screen and (max-width: 1440px) {
         .header .header-bottom .headhesive {
-          padding: 8px 16px;
+          padding: 8px 8px 8px 16px;
           height: 54px; } }
+      @media screen and (max-width: 1440px) {
+        .header .header-bottom .headhesive {
+          padding: 8px; } }
       .header .header-bottom .headhesive .logo {
         float: left; }
     .header .header-bottom .headhesive--stick {
@@ -3563,6 +3572,37 @@ span.ng {
       position: sticky;
       top: 50px;
       background: #FFF; } }
+
+.footer {
+  background: url("/assets/images/tmp/bg.svg") repeat-x;
+  height: 712px;
+  padding: 1px;
+  color: #4B6569; }
+  @media screen and (max-width: 1087px) {
+    .footer {
+      background: url("/assets/images/tmp/bg-mob.svg") repeat-x;
+      height: 590px; } }
+  .footer .columns {
+    margin: 256px auto;
+    width: 1001px; }
+    @media screen and (max-width: 1087px) {
+      .footer .columns {
+        margin: 128px auto;
+        width: 100%; }
+        .footer .columns .column:last-of-type {
+          padding-top: 0px; } }
+    .footer .columns .column {
+      padding: 34px 0 40px 0; }
+      @media screen and (max-width: 1087px) {
+        .footer .columns .column {
+          padding: 49px 16px 32px; } }
+      .footer .columns .column a {
+        font-size: 36px;
+        text-decoration: underline;
+        color: #4B6569; }
+        @media screen and (max-width: 1087px) {
+          .footer .columns .column a {
+            font-size: 28px; } }
 
 @media screen and (max-width: 667px) {
   .is-hidden-mobile667 {

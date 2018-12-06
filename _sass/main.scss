@@ -1,5 +1,6 @@
 body {
   font-family: $font-family-manrope;
+  font-size: $font-size-s2;
 }
 
 span.te{color: $color-te; font-weight: bold;}
@@ -9,6 +10,15 @@ span.ng{color: $color-ng; font-weight: bold;}
 .hero-body {
   max-width: $fullhd;
   margin: 0 auto;
+
+  h1{
+    font-size: $font-size-xxl;
+    margin-bottom: $offset-xl;
+  }
+
+  h2{
+    font-weight: bold;
+  }
 }
 
 .header {
@@ -105,7 +115,7 @@ span.ng{color: $color-ng; font-weight: bold;}
       }
 
       .brands{
-          font-size: $font-size-xm;
+          font-size: $font-size-s3;
           //margin-top: -$offset-s ;
         i{
           margin-right: $offset-l;
@@ -130,8 +140,11 @@ span.ng{color: $color-ng; font-weight: bold;}
       padding: $offset-l $offset-xxl;
       margin-top: 0;
       @include until($desktop1440) {
-        padding: $offset-m $offset-l;
+        padding: $offset-m $offset-m $offset-m $offset-l;
         height: 54px;
+      }
+      @include until($desktop1440) {
+        padding: $offset-m ;
       }
 
       .logo {
@@ -224,6 +237,47 @@ span.ng{color: $color-ng; font-weight: bold;}
     }
   }
 }
+
+.footer{
+  background:url("/assets/images/tmp/bg.svg") repeat-x;
+  height: 712px;
+  padding: 1px;
+  color: $color-green-dark;
+  @include until($desktop){
+    background:url("/assets/images/tmp/bg-mob.svg") repeat-x;
+    height: 590px;
+  }
+  .columns{
+    margin: 256px auto;
+    width: 1001px;
+    @include until($desktop){
+      margin: 128px auto;
+      width: 100%;
+      .column:last-of-type{padding-top: 0px;}
+    }
+    .column{
+      padding: 34px 0 40px 0;
+      @include until($desktop){
+        padding: 49px 16px 32px ;
+      }
+
+      span{
+
+      }
+      a{
+
+        font-size: $font-size-xxl;
+        text-decoration: underline;
+        color: $color-green-dark;
+        @include until($desktop){
+          font-size: $font-size-m2;
+        }
+      }
+
+    }
+  }
+}
+
 
 
 @include until($mobile667){
