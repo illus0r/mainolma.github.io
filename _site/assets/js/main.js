@@ -82,7 +82,8 @@ function initScroll() {
 
 function drawGraph() {
     var width = d3.select("#graph-container").node().getBoundingClientRect().width
-    var height = (document.documentElement.clientWidth>456) ? "80vh" : "50vh"
+    var hh=document.documentElement.clientHeight-50
+    var height = (document.documentElement.clientWidth>456) ? hh : "50vh"
     var graph = d3.select('#graph')
         .append('svg')
         .attrs({width: width, height: height, viewBox:"0 0 640 619", preserveAspectRatio:"xMidYMin meet"});

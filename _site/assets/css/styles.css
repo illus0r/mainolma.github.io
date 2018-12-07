@@ -3560,7 +3560,7 @@ span.ng {
         padding-right: 0; } }
   #scroll-container #graph {
     position: sticky;
-    top: 10%; }
+    top: 43px; }
   #scroll-container #graph.fullscreen {
     z-index: 9999;
     width: 100%;
@@ -3611,7 +3611,7 @@ span.ng {
     padding: 1px;
     width: 1441px;
     margin: 0 auto; }
-    @media screen and (max-width: 1087px) {
+    @media screen and (max-width: 1440px) {
       .footer-container .basement {
         width: 100%; } }
     @media screen and (max-width: 667px) {

@@ -218,7 +218,7 @@ span.ng{color: $color-ng; font-weight: bold;}
 
   #graph {
     position: sticky;
-    top: 10%;
+    top: 43px;
     }
   #graph.fullscreen{
     z-index: 9999;
@@ -269,9 +269,7 @@ span.ng{color: $color-ng; font-weight: bold;}
         @include until($desktop) {
           padding: 49px 16px 32px;
         }
-
         span {
-
         }
         a {
           font-size: $font-size-xxl;
@@ -287,7 +285,7 @@ span.ng{color: $color-ng; font-weight: bold;}
   .basement{
     padding: 1px;
     width: $desktop1440;
-    @include until($desktop) {
+    @include until($desktop1440) {
       width: 100%;
     }
     @include until($mobile667) {
