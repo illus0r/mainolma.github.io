@@ -16,8 +16,12 @@ function init() {
 }
 
 function updateSvg() {
+    //var width = d3.select("#graph-container").node().getBoundingClientRect().width
+    //var height = (document.documentElement.clientWidth>456) ? "90vh" : "50vh"
     var width = d3.select("#graph-container").node().getBoundingClientRect().width
-    var height = (document.documentElement.clientWidth>456) ? "90vh" : "50vh"
+    var hh=document.documentElement.clientHeight-50
+    hh =  hh>619 ? 619 : hh
+    var height = (document.documentElement.clientWidth>456) ? hh : "50vh"
     d3.select('#graph')
         .select('svg')
         .attrs({width: width, height: height, viewBox:"0 0 640 619", preserveAspectRatio:"xMidYMin meet"});
