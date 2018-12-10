@@ -10,10 +10,15 @@ span.ng{color: $color-ng; font-weight: bold;}
 .hero-body {
   max-width: $fullhd;
   margin: 0 auto;
+  padding: 53px 37px;
+  @include until($desktop1440) {
+    padding: $offset-l;
+  }
 
   h1{
     font-size: $font-size-xxl;
     margin-bottom: $offset-xl;
+    line-height: 1.2em;
   }
 
   h2{
@@ -27,8 +32,8 @@ span.ng{color: $color-ng; font-weight: bold;}
   max-height: $height-of-head;
 
   .header-top {
-    padding: $offset-xl;
-    @include until($desktop1440) {
+    padding: $offset-xl2 0 0 $offset-xl;
+    @include until($desktop) {
       padding: $offset-l;
     }
     @include until($mobile667) {
@@ -36,10 +41,21 @@ span.ng{color: $color-ng; font-weight: bold;}
     }
   }
 
+  .logo img{
+    width: 203px;
+    @include until($desktop){
+      width:105px;
+    }
+  }
+
   .lang {
     font-size: $font-size-xxl;
-    @include until($mobile667) {
+    padding: 50px 64px 0 0;
+    @include until($desktop) {
       font-size: $font-size-m;
+    }
+    @include until($desktop){
+      padding: $offset-l 25px 0 0;
     }
 
     a {
@@ -47,6 +63,7 @@ span.ng{color: $color-ng; font-weight: bold;}
       text-decoration: underline;
     }
     span {
+      margin-right: 10px;
       color: $color-gray-dark;
     }
   }
@@ -75,10 +92,17 @@ span.ng{color: $color-ng; font-weight: bold;}
     }
 
     .header-links {
-      font-size: $font-size-m;
+      font-size: $font-size-s2;
       margin-top: $offset-xxl;
-      padding: $offset-l 0;
+      padding: $offset-ml 0;
       border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+      .whitepaper {
+        margin: 0 $offset-xxxl;
+        @include until($desktop1440) {
+          margin: 0 ;
+        }
+      }
 
       @include until($desktop1440) {
         font-size: $font-size-s;
@@ -187,7 +211,7 @@ span.ng{color: $color-ng; font-weight: bold;}
 
 #scroll-container {
   position: relative;
-  padding-bottom:100px; ;
+  padding-bottom:0;
   @include until($mobile456) {
     display: flex;
     flex-direction: column-reverse;

@@ -3409,10 +3409,15 @@ span.ng {
 
 .hero-body {
   max-width: 1472px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 53px 37px; }
+  @media screen and (max-width: 1440px) {
+    .hero-body {
+      padding: 16px; } }
   .hero-body h1 {
     font-size: 36px;
-    margin-bottom: 32px; }
+    margin-bottom: 32px;
+    line-height: 1.2em; }
   .hero-body h2 {
     font-weight: bold; }
 
@@ -3421,22 +3426,32 @@ span.ng {
   min-height: 320px;
   max-height: 805px; }
   .header .header-top {
-    padding: 32px; }
-    @media screen and (max-width: 1440px) {
+    padding: 36px 0 0 32px; }
+    @media screen and (max-width: 1087px) {
       .header .header-top {
         padding: 16px; } }
     @media screen and (max-width: 667px) {
       .header .header-top {
         padding: 16px; } }
+  .header .logo img {
+    width: 203px; }
+    @media screen and (max-width: 1087px) {
+      .header .logo img {
+        width: 105px; } }
   .header .lang {
-    font-size: 36px; }
-    @media screen and (max-width: 667px) {
+    font-size: 36px;
+    padding: 50px 64px 0 0; }
+    @media screen and (max-width: 1087px) {
       .header .lang {
         font-size: 22px; } }
+    @media screen and (max-width: 1087px) {
+      .header .lang {
+        padding: 16px 25px 0 0; } }
     .header .lang a {
       color: #FFF;
       text-decoration: underline; }
     .header .lang span {
+      margin-right: 10px;
       color: #4A6568; }
   .header .header-bottom {
     margin-top: auto;
@@ -3459,10 +3474,15 @@ span.ng {
     .header .header-bottom a {
       color: #FFF; }
     .header .header-bottom .header-links {
-      font-size: 22px;
+      font-size: 20px;
       margin-top: 40px;
-      padding: 16px 0;
+      padding: 12px 0;
       border-top: 1px solid rgba(255, 255, 255, 0.5); }
+      .header .header-bottom .header-links .whitepaper {
+        margin: 0 64px; }
+        @media screen and (max-width: 1440px) {
+          .header .header-bottom .header-links .whitepaper {
+            margin: 0; } }
       @media screen and (max-width: 1440px) {
         .header .header-bottom .header-links {
           font-size: 16px;
@@ -3538,7 +3558,7 @@ span.ng {
 
 #scroll-container {
   position: relative;
-  padding-bottom: 100px; }
+  padding-bottom: 0; }
   @media screen and (max-width: 455px) {
     #scroll-container {
       display: flex;

@@ -1,13 +1,11 @@
 <div class="header-links">
-    <span class="is-hidden-mobile667">Узнайте больше:</span>
+    <span class="is-hidden-mobile667">Узнайте больше: </span>
 
-    {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" {% if item.hide-on-mobile %} class="is-hidden-desktop1440"{% endif %}>
-       <!--{% if page.url == item.link %} class="current"{% endif %}-->
-        {{ item.name }}
-    </a>
-    {% endfor %}
-    <div class="is-pulled-right mail">info@ideaproject.tech</div>
+    <a href="{{page.url_whitepaper}}" class="whitepaper">Whitepaper</a>
+    <a href="{{page.url_telegram}}" class="is-hidden-desktop1440">Telegram</a>
+    <a href="{{page.url_medium}}" class="is-hidden-desktop1440">Medium</a>
+
+    <div class="is-pulled-right mail">{{page.url_email}}</div>
     <div class="is-pulled-right brands is-hidden-mobile456">
         <a href=""><i class="fab fa-medium"></i></a>
         <a href=""> <i class="fab fa-telegram"></i></a>
@@ -22,5 +20,5 @@
     </a>
     {% endfor %}
 
-    <div class="is-pulled-right mail">info@ideaproject.tech</div>
+    <div class="is-pulled-right mail">{{ site.email }}</div>
 </div>
