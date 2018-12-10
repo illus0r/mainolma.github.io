@@ -119,8 +119,16 @@ function changeScheme(i) {
     var sections = d3.selectAll("div.show,div.hide");
     sections.each(function (section) {
         var group_id = d3.select(this).attr("id")
+        var group_viewbox = d3.select(this).attr("data-viewbox")
+        !group_viewbox ? group_viewbox="0 0 644 619" : true
+
         if (d3.select(this).classed("show")) {
-            if (group_id ==("triangle" || "te_highlight" || "iot_highlight" || "ng_highlight"))
+            d3.select("svg")
+                .transition()
+                .duration(500)
+                .attr("viewBox",group_viewbox)
+
+            if (group_id ==("triangle" || "te_highlight" || "iot_highlight" || "ng_highlight")) {
                 d3.select("g#" + group_id)
                     .attr("transform", "translate(0,10)")
                     //.transition()
@@ -128,8 +136,9 @@ function changeScheme(i) {
                     //.ease(d3.easeQuadIn)
                     .attr("opacity", 1)
                     .style("display", null)
-
+            }
             else {
+
                 d3.select("g#" + group_id)
                     .transition()
                     .duration(100)

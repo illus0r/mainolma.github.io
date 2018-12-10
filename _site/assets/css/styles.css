@@ -3571,13 +3571,12 @@ span.ng {
     opacity: 0.2; }
   @media screen and (max-width: 667px) {
     #scroll-container #sections {
-      padding: 0; } }
+      /*padding: 0;*/ } }
   #scroll-container #sections .section {
     padding: 3rem 0; }
     @media screen and (max-width: 667px) {
       #scroll-container #sections .section {
-        padding-left: 0;
-        padding-right: 0; } }
+        padding: 1.5rem 0; } }
   #scroll-container #graph {
     position: sticky;
     top: 43px; }
