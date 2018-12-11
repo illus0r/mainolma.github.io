@@ -3607,8 +3607,8 @@ span.ng {
     padding: 1px; }
     @media screen and (max-width: 1087px) {
       .footer-container .footer {
-        background: url("/assets/images/tmp/bg-mob.svg") repeat-x;
-        height: 590px; } }
+        background: url("/assets/images/tmp/bg-mob.svg") repeat-x 32px 0;
+        height: 592px; } }
     .footer-container .footer .columns {
       margin: 256px auto;
       width: 896px; }
@@ -3637,7 +3637,7 @@ span.ng {
       margin-top: 408px; }
       @media screen and (max-width: 1087px) {
         .footer-container .footer .footer-rect-medium {
-          left: 64px;
+          left: 96px !important;
           margin-top: 461px; } }
     .footer-container .footer .footer-rect-telegram {
       position: absolute;
@@ -3648,7 +3648,7 @@ span.ng {
       margin-top: 472px; }
       @media screen and (max-width: 1087px) {
         .footer-container .footer .footer-rect-telegram {
-          left: 128px;
+          left: 32px !important;
           margin-top: 461px; } }
   .footer-container .basement {
     padding: 1px;

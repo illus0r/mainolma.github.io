@@ -278,8 +278,8 @@ span.ng{color: $color-ng; font-weight: bold;}
     padding: 1px;
 
     @include until($desktop) {
-      background: url("/assets/images/tmp/bg-mob.svg") repeat-x;
-      height: 590px;
+      background: url("/assets/images/tmp/bg-mob.svg") repeat-x 32px 0;
+      height: 592px;
     }
     .columns {
       margin: 256px auto;
@@ -316,7 +316,7 @@ span.ng{color: $color-ng; font-weight: bold;}
       left: 50%;
       margin-top:408px;
       @include until($desktop) {
-        left: 64px;
+        left: 96px !important;
         margin-top: 461px;
       }
     }
@@ -328,7 +328,7 @@ span.ng{color: $color-ng; font-weight: bold;}
       left: 60%;
       margin-top:472px;
       @include until($desktop) {
-        left: 128px;
+        left: 32px !important;
         margin-top: 461px;
       }
     }
