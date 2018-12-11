@@ -26,7 +26,7 @@ function updateSvg() {
     var height = (document.documentElement.clientWidth>456) ? hh : "50vh"
     d3.select('#graph')
         .select('svg')
-        .attrs({width: width, height: height, viewBox:"0 0 640 619", preserveAspectRatio:"xMidYMin meet"});
+        .attrs({width: width, height: height, preserveAspectRatio:"xMidYMin meet"});
 }
 
 function updateCanvas(canvasName, divName) {
@@ -94,7 +94,7 @@ function drawGraph() {
     var height = (document.documentElement.clientWidth>456) ? hh : "50vh"
     var graph = d3.select('#graph')
         .append('svg')
-        .attrs({width: width, height: height, viewBox:"0 0 640 619", preserveAspectRatio:"xMidYMin meet"});
+        .attrs({width: width, height: height, viewBox:"130 200 390 400", preserveAspectRatio:"xMidYMin meet"});
     var svg = d3.select('#graph svg');
 
     d3.xml("assets/images/Scheme.svg").then(function(documentFragment,error) {
