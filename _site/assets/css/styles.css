@@ -3611,7 +3611,7 @@ span.ng {
         height: 590px; } }
     .footer-container .footer .columns {
       margin: 256px auto;
-      width: 1001px; }
+      width: 896px; }
       @media screen and (max-width: 1087px) {
         .footer-container .footer .columns {
           margin: 128px auto;
@@ -3628,6 +3628,28 @@ span.ng {
           @media screen and (max-width: 1087px) {
             .footer-container .footer .columns .column a {
               font-size: 28px; } }
+    .footer-container .footer .footer-rect-medium {
+      position: absolute;
+      width: 72px;
+      height: 72px;
+      background: url(/assets/images/medium.svg) no-repeat;
+      left: 50%;
+      margin-top: 408px; }
+      @media screen and (max-width: 1087px) {
+        .footer-container .footer .footer-rect-medium {
+          left: 64px;
+          margin-top: 461px; } }
+    .footer-container .footer .footer-rect-telegram {
+      position: absolute;
+      width: 72px;
+      height: 72px;
+      background: url(/assets/images/telegram.svg) no-repeat;
+      left: 60%;
+      margin-top: 472px; }
+      @media screen and (max-width: 1087px) {
+        .footer-container .footer .footer-rect-telegram {
+          left: 128px;
+          margin-top: 461px; } }
   .footer-container .basement {
     padding: 1px;
     width: 1441px;

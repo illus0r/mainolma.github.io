@@ -283,7 +283,7 @@ span.ng{color: $color-ng; font-weight: bold;}
     }
     .columns {
       margin: 256px auto;
-      width: 1001px;
+      width: 896px;
       @include until($desktop) {
         margin: 128px auto;
         width: 100%;
@@ -305,6 +305,31 @@ span.ng{color: $color-ng; font-weight: bold;}
           }
         }
 
+      }
+    }
+
+    .footer-rect-medium{
+      position: absolute;
+      width: 72px;
+      height: 72px;
+      background: url(/assets/images/medium.svg) no-repeat;
+      left: 50%;
+      margin-top:408px;
+      @include until($desktop) {
+        left: 64px;
+        margin-top: 461px;
+      }
+    }
+    .footer-rect-telegram{
+      position: absolute;
+      width: 72px;
+      height: 72px;
+      background: url(/assets/images/telegram.svg) no-repeat;
+      left: 60%;
+      margin-top:472px;
+      @include until($desktop) {
+        left: 128px;
+        margin-top: 461px;
       }
     }
   }

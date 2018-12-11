@@ -4,6 +4,7 @@ window.addEventListener("resize",  function(){
     updateCanvas("canvas-main", "header");
     updateCanvas("canvas-sticky", "headhesive");
     updateSvg()
+    updateFooter()
 });
 window.addEventListener("orientationchange", function() {
     //alert("the orientation of the device is now " + screen.orientation.angle);
@@ -13,6 +14,7 @@ window.addEventListener("orientationchange", function() {
 function init() {
     updateCanvas("canvas-main", "header");
     drawGraph()
+    updateFooter()
 }
 
 function updateSvg() {
@@ -53,9 +55,7 @@ function updateCanvas(canvasName, divName) {
 $(window).on('scroll', function () {
     if (window.pageYOffset >= $('.header-links').offset().top) {
         $('.headhesive').removeClass('headhesive--unstick').addClass('headhesive--stick');
-
-            updateCanvas("canvas-sticky", "headhesive");
-
+        updateCanvas("canvas-sticky", "headhesive");
     } else {
         $('.headhesive').css('background', 'transparent').removeClass('headhesive--stick').addClass('headhesive--unstick');
     }
@@ -160,5 +160,15 @@ function changeScheme(i) {
                 .style("display", "none")
 
     })
+}
+
+function updateFooter() {
+    var width=document.documentElement.clientWidth,
+    cels=Math.floor(width/64),
+    halfCels=Math.floor(cels/2),
+    left_medium=halfCels*64,
+    left_telegram=left_medium+64*2
+    $('.footer-rect-medium').css("left",left_medium)
+    $('.footer-rect-telegram').css("left",left_telegram)
 }
 
