@@ -99,9 +99,13 @@ span.ng{color: $color-ng; font-weight: bold;}
 
       .whitepaper {
         margin: 0 $offset-xxxl;
-        @include until($desktop1440) {
+        @include until($desktop1024) {
           margin: 0 ;
         }
+      }
+
+      .telegram{
+        /*margin-left: $offset-xxxl;*/
       }
 
       @include until($desktop1440) {
@@ -114,7 +118,7 @@ span.ng{color: $color-ng; font-weight: bold;}
       }
 
       >a {
-        margin-left: $offset-xl;
+        margin-right: $offset-l;
         text-decoration: underline;
         vertical-align: -moz-middle-with-baseline;
         line-height: 36px;
@@ -169,7 +173,7 @@ span.ng{color: $color-ng; font-weight: bold;}
       }
 
       .logo {
-        margin-right: $offset-sxl;
+        margin-right: $offset-l;
         float: left;
 
       }
@@ -346,4 +350,12 @@ span.ng{color: $color-ng; font-weight: bold;}
 
 @include until($desktop1440){
   .is-hidden-desktop1440{
+    display: none !important}}
+
+@include until($desktop1024){
+  .is-hidden-desktop1024{
+    display: none !important}}
+
+@include from($desktop1024){
+  .is-hidden-from-desktop1024{
     display: none !important}}

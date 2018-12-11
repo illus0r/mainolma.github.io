@@ -53,9 +53,9 @@ function updateCanvas(canvasName, divName) {
 $(window).on('scroll', function () {
     if (window.pageYOffset >= $('.header-links').offset().top) {
         $('.headhesive').removeClass('headhesive--unstick').addClass('headhesive--stick');
-        setTimeout(function () {
+
             updateCanvas("canvas-sticky", "headhesive");
-        }, 10);
+
     } else {
         $('.headhesive').css('background', 'transparent').removeClass('headhesive--stick').addClass('headhesive--unstick');
     }
