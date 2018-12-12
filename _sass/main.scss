@@ -138,6 +138,7 @@ span.ng{color: $color-ng; font-weight: bold;}
         padding: $offset-link-m;
         height: 100%;
         color: $color-green-dark;
+        line-height: 1.5;
         @include until($mobile667) {
           padding:$offset-link-s;
         }
@@ -149,7 +150,7 @@ span.ng{color: $color-ng; font-weight: bold;}
       .brands{
           font-size: $font-size-s3;
           //margin-top: -$offset-s ;
-        i{
+        a{
           margin-right: $offset-l;
         }
         @include from($desktop1440) {
@@ -289,7 +290,7 @@ span.ng{color: $color-ng; font-weight: bold;}
       margin: 256px auto;
       width: 896px;
       @include until($desktop) {
-        margin: 128px auto;
+        margin: 138px auto;
         width: 100%;
         .column:last-of-type {
           padding-top: 0px;
@@ -299,6 +300,7 @@ span.ng{color: $color-ng; font-weight: bold;}
         padding: 34px 0 40px 0;
         @include until($desktop) {
           padding: 49px 16px 32px;
+          width: 340px;
         }
         span {
         }

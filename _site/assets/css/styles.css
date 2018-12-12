@@ -3509,7 +3509,8 @@ span.ng {
         border-radius: 4px;
         padding: 6px 16px;
         height: 100%;
-        color: #4B6569; }
+        color: #4B6569;
+        line-height: 1.5; }
         @media screen and (max-width: 667px) {
           .header .header-bottom .header-links .mail {
             padding: 6px 8px; } }
@@ -3517,7 +3518,7 @@ span.ng {
           color: #4B6569; }
       .header .header-bottom .header-links .brands {
         font-size: 24px; }
-        .header .header-bottom .header-links .brands i {
+        .header .header-bottom .header-links .brands a {
           margin-right: 16px; }
         @media screen and (min-width: 1441px) {
           .header .header-bottom .header-links .brands {
@@ -3615,7 +3616,7 @@ span.ng {
       width: 896px; }
       @media screen and (max-width: 1087px) {
         .footer-container .footer .columns {
-          margin: 128px auto;
+          margin: 138px auto;
           width: 100%; }
           .footer-container .footer .columns .column:last-of-type {
             padding-top: 0px; } }
@@ -3623,7 +3624,8 @@ span.ng {
         padding: 34px 0 40px 0; }
         @media screen and (max-width: 1087px) {
           .footer-container .footer .columns .column {
-            padding: 49px 16px 32px; } }
+            padding: 49px 16px 32px;
+            width: 340px; } }
         .footer-container .footer .columns .column a {
           font-size: 36px; }
           @media screen and (max-width: 1087px) {
