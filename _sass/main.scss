@@ -163,8 +163,8 @@ span.ng{color: $color-ng; font-weight: bold;}
       z-index: 100;
       display: none;
       height: 64px;
-      will-change: transform,background;
-      max-width: none!important;
+      //will-change: transform,background;
+      //max-width: none!important;
       padding: $offset-ml $offset-xxl;
       margin-top: 0;
       @include until($desktop1440) {

@@ -3527,8 +3527,6 @@ span.ng {
       z-index: 100;
       display: none;
       height: 64px;
-      will-change: transform,background;
-      max-width: none !important;
       padding: 12px 40px;
       margin-top: 0; }
       @media screen and (max-width: 1440px) {
