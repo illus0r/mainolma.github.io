@@ -46,7 +46,7 @@ function updateCanvas(canvasName, divName) {
     if (height!=0){
     var pattern = Trianglify({
         height: height,
-        width: width,
+        width: window.outerWidth,
         variance:0,
         //seed:'eyjbc',
         x_colors:arr.reverse(),

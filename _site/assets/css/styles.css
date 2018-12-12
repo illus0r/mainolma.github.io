@@ -3502,7 +3502,8 @@ span.ng {
         margin-right: 16px;
         text-decoration: underline;
         vertical-align: -moz-middle-with-baseline;
-        line-height: 36px; }
+        line-height: 36px;
+        display: contents; }
         @media screen and (max-width: 667px) {
           .header .header-bottom .header-links > a {
             margin-left: 0; } }
@@ -3595,7 +3596,8 @@ span.ng {
     position: -o-sticky;
     position: -ms-sticky;
     position: sticky;
-    top: 43px; }
+    top: 43px;
+    overflow: hidden; }
   #scroll-container #graph.fullscreen {
     z-index: 9999;
     width: 100%;
@@ -3611,6 +3613,7 @@ span.ng {
       background: #FFF; } }
 
 .footer-container {
+  overflow: hidden;
   color: #4B6569; }
   .footer-container a {
     text-decoration: underline;
