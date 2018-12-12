@@ -132,7 +132,7 @@
             d3.select(window)
                 .on('scroll.gscroll'  + eventId, reposition)
                 .on('resize.gscroll'  + eventId, resize)
-                .on('keydown.gscroll' + eventId, keydown)
+                //.on('keydown.gscroll' + eventId, keydown)
 
             resize()
             if (window['gscrollTimer' + eventId]) window['gscrollTimer' + eventId].stop()
