@@ -260,6 +260,10 @@ span.ng{color: $color-ng; font-weight: bold;}
   }
 
   #graph {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -o-sticky;
+    position: -ms-sticky;
     position: sticky;
     top: 43px;
     }

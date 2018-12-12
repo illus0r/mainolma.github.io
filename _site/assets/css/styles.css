@@ -3590,6 +3590,10 @@ span.ng {
       #scroll-container #sections .section {
         padding: 1.5rem 0; } }
   #scroll-container #graph {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -o-sticky;
+    position: -ms-sticky;
     position: sticky;
     top: 43px; }
   #scroll-container #graph.fullscreen {
