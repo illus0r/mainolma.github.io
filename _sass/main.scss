@@ -101,7 +101,7 @@ span.ng{color: $color-ng; font-weight: bold;}
       .tall{
         padding: $offset-ml 0;
         &-hover,&:hover{
-          color: darken($color-white,25%);
+          opacity: 0.8;
         }
       }
 

@@ -3482,7 +3482,7 @@ span.ng {
       .header .header-bottom .header-links .tall {
         padding: 12px 0; }
         .header .header-bottom .header-links .tall-hover, .header .header-bottom .header-links .tall:hover {
-          color: #bfbfbf; }
+          opacity: 0.8; }
       .header .header-bottom .header-links .whitepaper {
         margin: 0 64px; }
         @media screen and (max-width: 1023px) {
