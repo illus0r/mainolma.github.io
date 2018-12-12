@@ -301,7 +301,7 @@ span.ng{color: $color-ng; font-weight: bold;}
     padding: 1px;
 
     @include until($desktop) {
-      background: url("/assets/images/tmp/bg-mob.svg") repeat-x 32px 0;
+      background: url("/assets/images/tmp/bg-mob.svg") repeat-x $offset-l 0;
       height: 592px;
     }
 
@@ -347,7 +347,7 @@ span.ng{color: $color-ng; font-weight: bold;}
       left: 50%;
       margin-top:408px;
       @include until($desktop) {
-        left: 96px !important;
+        left: 80px !important;
         margin-top: 461px;
       }
     }
@@ -359,7 +359,7 @@ span.ng{color: $color-ng; font-weight: bold;}
       left: 60%;
       margin-top:472px;
       @include until($desktop) {
-        left: 32px !important;
+        left: $offset-l !important;
         margin-top: 461px;
       }
     }

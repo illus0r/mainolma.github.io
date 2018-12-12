@@ -3623,7 +3623,7 @@ span.ng {
     padding: 1px; }
     @media screen and (max-width: 1087px) {
       .footer-container .footer {
-        background: url("/assets/images/tmp/bg-mob.svg") repeat-x 32px 0;
+        background: url("/assets/images/tmp/bg-mob.svg") repeat-x 16px 0;
         height: 592px; } }
     .footer-container .footer > a:hover {
       opacity: 0.8; }
@@ -3656,7 +3656,7 @@ span.ng {
       margin-top: 408px; }
       @media screen and (max-width: 1087px) {
         .footer-container .footer .footer-rect-medium {
-          left: 96px !important;
+          left: 80px !important;
           margin-top: 461px; } }
     .footer-container .footer .footer-rect-telegram {
       position: absolute;
@@ -3667,7 +3667,7 @@ span.ng {
       margin-top: 472px; }
       @media screen and (max-width: 1087px) {
         .footer-container .footer .footer-rect-telegram {
-          left: 32px !important;
+          left: 16px !important;
           margin-top: 461px; } }
   .footer-container .basement {
     padding: 1px;
