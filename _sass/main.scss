@@ -98,6 +98,13 @@ span.ng{color: $color-ng; font-weight: bold;}
       padding: $offset-ml 0;
       border-top: 1px solid rgba(255, 255, 255, 0.5);
 
+      .tall{
+        padding: $offset-ml 0;
+        &-hover,&:hover{
+          color: darken($color-white,25%);
+        }
+      }
+
       .whitepaper {
         margin: 0 $offset-xxxl;
         @include until($desktop1024) {
@@ -139,19 +146,23 @@ span.ng{color: $color-ng; font-weight: bold;}
         height: 100%;
         color: $color-green-dark;
         line-height: 1.5;
+        cursor: pointer;
         @include until($mobile667) {
           padding:$offset-link-s;
         }
-        a{
-          color: $color-green-dark;
-        }
       }
+      .mail:hover{
+        background: $color-orange;
+        color:#333333;}
 
       .brands{
           font-size: $font-size-s3;
           //margin-top: -$offset-s ;
         a{
           margin-right: $offset-l;
+        }
+        a:hover{
+          opacity: 0.8;
         }
         @include from($desktop1440) {
           display: none;
@@ -275,6 +286,9 @@ span.ng{color: $color-ng; font-weight: bold;}
   a {
     text-decoration: underline;
     color: $color-green-dark;
+    &:hover{
+      color: darken($color-green-dark,50%);
+    }
   }
 
   .footer {
@@ -286,6 +300,13 @@ span.ng{color: $color-ng; font-weight: bold;}
       background: url("/assets/images/tmp/bg-mob.svg") repeat-x 32px 0;
       height: 592px;
     }
+
+    >a{
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+
     .columns {
       margin: 256px auto;
       width: 896px;
