@@ -3502,8 +3502,7 @@ span.ng {
         margin-right: 16px;
         text-decoration: underline;
         vertical-align: -moz-middle-with-baseline;
-        line-height: 36px;
-        display: contents; }
+        line-height: 36px; }
         @media screen and (max-width: 667px) {
           .header .header-bottom .header-links > a {
             margin-left: 0; } }
@@ -3516,7 +3515,8 @@ span.ng {
         height: 100%;
         color: #4B6569;
         line-height: 1.5;
-        cursor: pointer; }
+        cursor: pointer;
+        display: inline-block; }
         @media screen and (max-width: 667px) {
           .header .header-bottom .header-links .mail {
             padding: 6px 8px; } }

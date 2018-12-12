@@ -130,7 +130,6 @@ span.ng{color: $color-ng; font-weight: bold;}
         text-decoration: underline;
         vertical-align: -moz-middle-with-baseline;
         line-height: 36px;
-        display: contents;
         @include until($mobile667) {
           margin-left: 0;
         }
@@ -148,6 +147,7 @@ span.ng{color: $color-ng; font-weight: bold;}
         color: $color-green-dark;
         line-height: 1.5;
         cursor: pointer;
+        display: inline-block;
         @include until($mobile667) {
           padding:$offset-link-s;
         }
