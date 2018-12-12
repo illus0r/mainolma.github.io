@@ -3411,7 +3411,7 @@ span.ng {
   max-width: 1472px;
   margin: 0 auto;
   padding: 53px 37px; }
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1087px) {
     .hero-body {
       padding: 16px; } }
   .hero-body h1 {
@@ -3424,7 +3424,7 @@ span.ng {
 .header {
   height: 100vh;
   min-height: 320px;
-  max-height: 805px; }
+  max-height: 2000px; }
   .header .header-top {
     padding: 36px 0 0 32px; }
     @media screen and (max-width: 1087px) {
@@ -3440,7 +3440,8 @@ span.ng {
         width: 105px; } }
   .header .lang {
     font-size: 36px;
-    padding: 50px 64px 0 0; }
+    padding: 50px 64px 0 0;
+    line-height: 1; }
     @media screen and (max-width: 1087px) {
       .header .lang {
         font-size: 22px; } }
@@ -3512,6 +3513,8 @@ span.ng {
         @media screen and (max-width: 667px) {
           .header .header-bottom .header-links .mail {
             padding: 6px 8px; } }
+        .header .header-bottom .header-links .mail a {
+          color: #4B6569; }
       .header .header-bottom .header-links .brands {
         font-size: 24px; }
         .header .header-bottom .header-links .brands i {
@@ -3544,7 +3547,7 @@ span.ng {
     max-width: 1472px;
     margin: 0 auto;
     height: 100vh;
-    max-height: 805px; }
+    max-height: 2000px; }
   .header canvas {
     position: absolute;
     z-index: -1;

@@ -11,7 +11,7 @@ span.ng{color: $color-ng; font-weight: bold;}
   max-width: $fullhd;
   margin: 0 auto;
   padding: 53px 37px;
-  @include until($desktop1440) {
+  @include until($desktop) {
     padding: $offset-l;
   }
 
@@ -51,6 +51,7 @@ span.ng{color: $color-ng; font-weight: bold;}
   .lang {
     font-size: $font-size-xxl;
     padding: 50px 64px 0 0;
+    line-height: 1;
     @include until($desktop) {
       font-size: $font-size-m;
     }
@@ -139,6 +140,9 @@ span.ng{color: $color-ng; font-weight: bold;}
         color: $color-green-dark;
         @include until($mobile667) {
           padding:$offset-link-s;
+        }
+        a{
+          color: $color-green-dark;
         }
       }
 
