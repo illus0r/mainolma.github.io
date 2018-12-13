@@ -35,7 +35,7 @@ function updateCanvas(canvasName, divName) {
     var header =  document.getElementsByClassName(divName)[0];
     var header_width =  document.getElementsByClassName("header")[0].offsetWidth;
     //console.log(header.clientHeight)
-    var height = header.offsetHeight;
+    var height = header.offsetHeight+1;
     var width = header.offsetWidth ;
     console.log(divName, width)
     var height_of_cell=document.documentElement.clientHeight/8
