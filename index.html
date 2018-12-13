@@ -7,7 +7,7 @@ url_medium: https://medium.com/internet-of-energy
 url_email: info@ideaproject.tech
 
 ---
-<h1>Принципы построения энергосистем в архитектуре Интернета энергии IDEA</h1>
+<h1>{% include typograph.html content="Принципы построения энергосистем в архитектуре Интернета энергии IDEA" %}</h1>
 {% include three-columns.html %}
 
 <div id='scroll-container' class="columns">
@@ -16,7 +16,7 @@ url_email: info@ideaproject.tech
         <div id={{ section.ident }} data-viewbox="{{ section.viewbox }}">
         <div class="section">
            <!-- <h2>{{ section.title }}</h2>-->
-            {{ section.content }}
+            {% include typograph.html content=section.content %}
         </div>
         </div>
         {% endfor %}
