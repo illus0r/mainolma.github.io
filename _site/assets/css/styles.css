@@ -3385,16 +3385,12 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 .is-shadowless {
   box-shadow: none !important; }
 
-@media screen and (max-width: 456px) {
-  .columns.is-full-ourmobile {
-    flex: none;
-    width: 100%; } }
-
 /* SCSS Variables */
 body {
   font-family: "Manrope", sans-serif;
   font-size: 20px; }
 
+/*colored text*/
 span.te {
   color: #FFA800;
   font-weight: bold; }
@@ -3424,13 +3420,11 @@ span.ng {
 .header {
   height: 100vh;
   min-height: 320px;
-  max-height: 2000px; }
+  max-height: 2000px;
+  /*Trianglyphy pattern on background*/ }
   .header .header-top {
     padding: 36px 0 0 32px; }
     @media screen and (max-width: 1087px) {
-      .header .header-top {
-        padding: 16px; } }
-    @media screen and (max-width: 667px) {
       .header .header-top {
         padding: 16px; } }
   .header .logo img {
@@ -3444,9 +3438,7 @@ span.ng {
     line-height: 1; }
     @media screen and (max-width: 1087px) {
       .header .lang {
-        font-size: 22px; } }
-    @media screen and (max-width: 1087px) {
-      .header .lang {
+        font-size: 22px;
         padding: 16px 25px 0 0; } }
     .header .lang a {
       color: #FFF;
@@ -3484,12 +3476,11 @@ span.ng {
         .header .header-bottom .header-links .tall-hover, .header .header-bottom .header-links .tall:hover {
           opacity: 0.8; }
       .header .header-bottom .header-links .whitepaper {
-        margin: 0 64px; }
+        margin: 0 64px;
+        /*whitepaper must be separate from other links*/ }
         @media screen and (max-width: 1023px) {
           .header .header-bottom .header-links .whitepaper {
             margin: 0; } }
-      .header .header-bottom .header-links .telegram {
-        /*margin-left: $offset-xxxl;*/ }
       @media screen and (max-width: 1440px) {
         .header .header-bottom .header-links {
           font-size: 16px;
@@ -3520,15 +3511,15 @@ span.ng {
         @media screen and (max-width: 667px) {
           .header .header-bottom .header-links .mail {
             padding: 6px 8px; } }
-      .header .header-bottom .header-links .mail:hover {
-        background: #FFA800;
-        color: #333333; }
+        .header .header-bottom .header-links .mail-hover, .header .header-bottom .header-links .mail:hover {
+          background: #FFA800;
+          color: #333333; }
       .header .header-bottom .header-links .brands {
         font-size: 24px; }
         .header .header-bottom .header-links .brands a {
           margin-right: 16px; }
-        .header .header-bottom .header-links .brands a:hover {
-          opacity: 0.8; }
+          .header .header-bottom .header-links .brands a-hover, .header .header-bottom .header-links .brands a:hover {
+            opacity: 0.8; }
         @media screen and (min-width: 1441px) {
           .header .header-bottom .header-links .brands {
             display: none; } }
@@ -3585,9 +3576,6 @@ span.ng {
     opacity: 1; }
   #scroll-container #sections div.hide {
     opacity: 0.2; }
-  @media screen and (max-width: 667px) {
-    #scroll-container #sections {
-      /*padding: 0;*/ } }
   #scroll-container #sections .section {
     padding: 3rem 0; }
     @media screen and (max-width: 667px) {
@@ -3615,9 +3603,11 @@ span.ng {
       top: 50px;
       background: #FFF; } }
 
+/* Footer */
 .footer-container {
   overflow: hidden;
-  color: #4B6569; }
+  color: #4B6569;
+  /* Under footer - copyrights etc*/ }
   .footer-container a {
     text-decoration: underline;
     color: #4B6569; }
@@ -3695,6 +3685,7 @@ span.ng {
     .footer-container .basement .column:last-of-type {
       text-align: right; }
 
+/* Hiders*/
 @media screen and (max-width: 667px) {
   .is-hidden-mobile667 {
     display: none !important; } }

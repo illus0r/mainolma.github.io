@@ -3,6 +3,7 @@ body {
   font-size: $font-size-s2;
 }
 
+/*colored text*/
 span.te{color: $color-te; font-weight: bold;}
 span.iot{color: $color-iot; font-weight: bold;}
 span.ng{color: $color-ng; font-weight: bold;}
@@ -28,15 +29,12 @@ span.ng{color: $color-ng; font-weight: bold;}
 
 .header {
   height: 100vh;
-  min-height: 320px;
-  max-height: $height-of-head;
+  min-height: $min-height-of-head;
+  max-height: $max-height-of-head;
 
   .header-top {
     padding: $offset-xl2 0 0 $offset-xl;
     @include until($desktop) {
-      padding: $offset-l;
-    }
-    @include until($mobile667) {
       padding: $offset-l;
     }
   }
@@ -54,8 +52,6 @@ span.ng{color: $color-ng; font-weight: bold;}
     line-height: 1;
     @include until($desktop) {
       font-size: $font-size-m;
-    }
-    @include until($desktop){
       padding: $offset-l 25px 0 0;
     }
 
@@ -63,6 +59,7 @@ span.ng{color: $color-ng; font-weight: bold;}
       color: $color-white;
       text-decoration: underline;
     }
+
     span {
       margin-right: 10px;
       color: $color-gray-dark;
@@ -74,6 +71,7 @@ span.ng{color: $color-ng; font-weight: bold;}
     color: $color-white;
     font-size: $font-size-xxl;
     padding: 0 $offset-xxl;
+
     @include until($desktop) {
       font-size: $font-size-m;
       padding: 0 $offset-l;
@@ -84,7 +82,7 @@ span.ng{color: $color-ng; font-weight: bold;}
     @include until($mobile375) {
       font-size: $font-size-s;
     }
-    @include mobile375-landscape{
+    @include mobile375-landscape {
       font-size: $font-size-s;
     }
 
@@ -98,22 +96,18 @@ span.ng{color: $color-ng; font-weight: bold;}
       padding: $offset-ml 0;
       border-top: 1px solid rgba(255, 255, 255, 0.5);
 
-      .tall{
+      .tall {
         padding: $offset-ml 0;
-        &-hover,&:hover{
+        &-hover, &:hover {
           opacity: 0.8;
         }
       }
 
       .whitepaper {
-        margin: 0 $offset-xxxl;
+        margin: 0 $offset-xxxl; /*whitepaper must be separate from other links*/
         @include until($desktop1024) {
-          margin: 0 ;
+          margin: 0;
         }
-      }
-
-      .telegram{
-        /*margin-left: $offset-xxxl;*/
       }
 
       @include until($desktop1440) {
@@ -125,7 +119,7 @@ span.ng{color: $color-ng; font-weight: bold;}
         margin-top: $offset-l;
       }
 
-      >a {
+      > a {
         margin-right: $offset-l;
         text-decoration: underline;
         vertical-align: -moz-middle-with-baseline;
@@ -148,42 +142,45 @@ span.ng{color: $color-ng; font-weight: bold;}
         line-height: 1.5;
         cursor: pointer;
         display: inline-block;
+
         @include until($mobile667) {
-          padding:$offset-link-s;
+          padding: $offset-link-s;
+        }
+
+        &-hover, &:hover {
+          background: $color-orange;
+          color: $color-black;
         }
       }
-      .mail:hover{
-        background: $color-orange;
-        color:#333333;}
 
-      .brands{
-          font-size: $font-size-s3;
-          //margin-top: -$offset-s ;
-        a{
+      .brands {
+        font-size: $font-size-s3;
+
+        a {
           margin-right: $offset-l;
+
+          &-hover, &:hover {
+            opacity: $opacity-xs;
+          }
         }
-        a:hover{
-          opacity: 0.8;
-        }
+
         @include from($desktop1440) {
           display: none;
         }
-        }
-
+      }
 
     }
     .headhesive {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%!important;
+      width: 100% !important;
       z-index: 100;
       display: none;
       height: 64px;
-      //will-change: transform,background;
-      //max-width: none!important;
       padding: $offset-ml $offset-xxl;
       margin-top: 0;
+
       @include until($desktop1440) {
         padding: $offset-m $offset-m $offset-m $offset-l;
         height: 54px;
@@ -192,25 +189,26 @@ span.ng{color: $color-ng; font-weight: bold;}
       .logo {
         margin-right: $offset-l;
         float: left;
-
       }
-
     }
+
     .headhesive--stick {
       display: block;
     }
 
-    .hidden-header{display: none}
-
+    .hidden-header {
+      display: none;
+    }
   }
 
   .columns{
-    //padding: $offset-xxl;
     max-width: $fullhd;
     margin: 0 auto;
     height: 100vh;
-    max-height: $height-of-head;
+    max-height: $max-height-of-head;
   }
+
+  /*Trianglyphy pattern on background*/
 
   canvas{
     position: absolute;
@@ -233,6 +231,7 @@ span.ng{color: $color-ng; font-weight: bold;}
 #scroll-container {
   position: relative;
   padding-bottom:0;
+
   @include until($mobile456) {
     display: flex;
     flex-direction: column-reverse;
@@ -240,23 +239,24 @@ span.ng{color: $color-ng; font-weight: bold;}
 
   #sections {
     @include from($mobile456) {
-      padding-bottom: 180px;
+      padding-bottom: 180px; //space under last section
     }
 
     > div {
       opacity: $opacity-none;
     }
+
     div.graph-scroll-active {
       opacity: $opacity-none;
     }
+
     div.hide{
       opacity: $opacity-l;
     }
-    @include until($mobile667) {
-      /*padding: 0;*/
-    }
+
     .section{
       padding: 3rem 0;
+
       @include until($mobile667) {
         padding: 1.5rem 0;
       }
@@ -272,6 +272,7 @@ span.ng{color: $color-ng; font-weight: bold;}
     top: 43px;
     overflow: hidden;
     }
+
   #graph.fullscreen{
     z-index: 9999;
     width: 100%;
@@ -290,6 +291,9 @@ span.ng{color: $color-ng; font-weight: bold;}
     }
   }
 }
+
+/* Footer */
+
 .footer-container {
   overflow: hidden;
   color: $color-green-dark;
@@ -313,7 +317,7 @@ span.ng{color: $color-ng; font-weight: bold;}
 
     >a{
       &:hover{
-        opacity: 0.8;
+        opacity: $opacity-xs;
       }
     }
 
@@ -370,32 +374,41 @@ span.ng{color: $color-ng; font-weight: bold;}
       }
     }
   }
+  /* Under footer - copyrights etc*/
 
   .basement{
     padding: 1px;
     width: $desktop1440;
+
     @include until($desktop1440) {
       width: 100%;
     }
+
     @include until($mobile667) {
       font-size: $font-size-s;
     }
+
     margin: 0 auto;
+
     .columns{
       padding: 0 $offset-xl;
+
       @include until($desktop1440) {
         padding: 0 $offset-l;
       }
     }
+
     .column {
       height: 112px;
     }
+
     .column:last-of-type {
       text-align: right;
     }
   }
 }
 
+/* Hiders*/
 
 @include until($mobile667){
   .is-hidden-mobile667{

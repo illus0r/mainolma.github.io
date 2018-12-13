@@ -33,8 +33,8 @@ $desktop1024: 1024px !default;
 }
 
 // structure
-
-$height-of-head: 2000px;
+$min-height-of-head: 320px;
+$max-height-of-head: 2000px;
 
 // opacity
 
@@ -60,10 +60,7 @@ $offset-xl: 32px;
 $offset-xxl: 40px;
   $offset-sxl:  24px;
 $offset-xxxl: 64px;
-$offset-container: $offset-s;
-$offset-component: $offset-m;
-$offset-component-inside: $offset-s;
-$offset-page: $offset-xl;
+
 $offset-link-m: $offset-xm $offset-l;
 $offset-link-s: $offset-xm $offset-m;
 
@@ -79,10 +76,7 @@ $color-red: #FC121B;
 $color-blue: #1AA5B8;
 $color-yellow: #FCDB00;
 $color-orange: #FFA800;
-$color-accent: $color-yellow;
-$color-interactive: $color-blue;
-$color-caution: $color-red;
-$color-overlay: $color-black;
+$color-black:#333333;
 
 //scheme colors
 
@@ -106,13 +100,6 @@ $font-size-m:22px;
 $font-size-s:16px;
 $font-size-xs:8px;
 
-$font-h1-line-height:           36px;
-
-$font-h1-size:                  32px;
-$font-h1:                       bold $font-h1-size / $font-h1-line-height $font-family-manrope;
-
-
-// border radius
 
 // border-radius
 
