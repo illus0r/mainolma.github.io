@@ -3578,7 +3578,7 @@ span.ng {
       flex-direction: column-reverse; } }
   @media screen and (min-width: 456px) {
     #scroll-container #sections {
-      padding-bottom: 250px; } }
+      padding-bottom: 180px; } }
   #scroll-container #sections > div {
     opacity: 1; }
   #scroll-container #sections div.graph-scroll-active {

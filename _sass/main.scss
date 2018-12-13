@@ -240,7 +240,7 @@ span.ng{color: $color-ng; font-weight: bold;}
 
   #sections {
     @include from($mobile456) {
-      padding-bottom: 250px;
+      padding-bottom: 180px;
     }
 
     > div {
