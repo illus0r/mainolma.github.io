@@ -3,13 +3,18 @@
         <img src="/assets/images/logo.svg" alt="IDEA">
     </div>
     <div class="column has-text-right header-top lang">
-        <span>Ru</span>&nbsp;<a href="">En</a>
+        {% if page.url == "/" %}
+            <span>Ru</span>&nbsp;<a href="index-en.html">En</a>
+        {% else %}
+            <a href="index.html">Ru</a>&nbsp;<span>En</span>
+        {% endif %}
     </div>
 
     <div class="column is-full header-bottom has-vertically-aligned-content ">
-        {% include typograph.html content="<span><b>Internet of Decentrаlized Energy Architecture&nbsp;</b>—<br> тип децентра&shy;лизованной электроэнергетической системы, в которой реализовано интеллектуальное распределенное управление, осуществляемое за счет энергетических трансакций между ее пользователями.</span>"%}
+        {%assign var = site.t[page.lang].head%}
+        {% include typograph.html content=var%}
         <div class="header-links">
-            <span class="is-hidden-desktop1024">Узнайте больше: </span>
+            <span class="is-hidden-desktop1024">{{site.t[page.lang].learnmore}}</span>
             {% include links.html %}
         </div>
         <div class="headhesive header-links">

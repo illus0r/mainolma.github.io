@@ -3,3 +3,25 @@ collections:
     output: true
 
 email: info@ideaproject.tech
+
+t:
+  ru:
+    hello: 'Привет:)'
+    learnmore: 'Узнайте больше:'
+    head: '<span><b>Internet of Decentrаlized Energy Architecture&nbsp;</b>—<br> тип децентра&shy;лизованной электроэнергетической системы, в которой реализовано интеллектуальное распределенное управление, осуществляемое за счет энергетических трансакций между ее пользователями.</span>'
+    principi: 'Принципы построения энергосистем в архитектуре Интернета энергии IDEA'
+    fulldescription: 'Полное описание ­ архитектуры IDEA —'
+    writetous: 'Пишите, будем рады ответить:'
+    copyright: 'Сайт разработала '
+    companyname: 'Компания'
+    whitepaperurl: 'IDEA-whitepaper-ru.pdf'
+  en:
+    hello: 'Hello:)'
+    learnmore: 'Learn more:'
+    head: '<span><b>Internet of distributed energy&nbsp;</b>—<br> is a kind of decentralized power grid, where smart distributed control is implemented based on energy transactions between system users'
+    principi: 'Power systems build on principles of the IDEA architecture are: '
+    fulldescription: 'Full description'
+    writetous: 'E-mail, we will be happy to answer:'
+    copyright: 'Made by '
+    companyname: 'Company'
+    whitepaperurl: 'IDEA-whitepaper-en.pdf'

@@ -3,11 +3,11 @@
     <a href="{{page.url_telegram}}"><div class="footer-rect-telegram"></div></a>
     <div class="columns is-desktop">
         <div class="column">
-            <span>Полное описание &shy; архитектуры IDEA —</span><br>
-            <a href="{{page.url_whitepaper}}">Whitepaper</a>
+            <span>{{site.t[page.lang].fulldescription}}</span><br>
+            <a href="{{site.t[page.lang].whitepaperurl}}">Whitepaper</a>
         </div>
         <div class="column">
-            <span>Пишите, будем рады ответить:</span><br>
+            <span>{{site.t[page.lang].writetous}}</span><br>
             <a href="mailto:{{ page.url_email }}">{{ page.url_email }}</a>
         </div>
     </div>
@@ -18,7 +18,7 @@
             © 2018 IDEA
         </div>
         <div class="column has-vertically-aligned-content is-half">
-            <span>Сайт разработала <a href="">Компания</a></span>
+            <span>{{site.t[page.lang].copyright}}<a href="">{{site.t[page.lang].companyname}}</a></span>
         </div>
     </div>
 </div>
