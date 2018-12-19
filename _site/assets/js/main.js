@@ -157,7 +157,7 @@ function drawGraph() {
 /*change scheme on scroll*/
 
 function changeScheme(i) {
-    console.log("active section №" + (i + 1))
+    //console.log("active section №" + (i + 1))
     $("div.graph-scroll-active").prevAll().attr("class", "show");
     $("div.graph-scroll-active").nextAll().attr("class", "hide");
     $("div.graph-scroll-active").attr("class", "graph-scroll-active show");
