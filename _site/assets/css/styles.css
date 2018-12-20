@@ -3423,15 +3423,15 @@ span.ng {
   max-height: 2000px;
   /*Trianglyphy pattern on background*/ }
   .header .header-top {
-    padding: 36px 0 0 32px; }
+    padding: 54px 0 0 40px; }
     @media screen and (max-width: 1087px) {
       .header .header-top {
         padding: 16px; } }
   .header .logo img {
-    width: 203px; }
+    width: 268px; }
     @media screen and (max-width: 1087px) {
       .header .logo img {
-        width: 105px; } }
+        width: 140px; } }
   .header .lang {
     font-size: 36px;
     padding: 50px 64px 0 0;
@@ -3440,12 +3440,18 @@ span.ng {
       .header .lang {
         font-size: 22px;
         padding: 16px 25px 0 0; } }
+    @media screen and (max-width: 667px) {
+      .header .lang {
+        padding: 16px 16px 0 0; } }
     .header .lang a {
-      color: #FFF;
+      color: #4A6568;
       text-decoration: underline; }
     .header .lang span {
       margin-right: 10px;
-      color: #4A6568; }
+      color: #FFF; }
+    .header .lang a + span {
+      margin-left: 10px;
+      margin-right: 0; }
   .header .header-bottom {
     margin-top: auto;
     color: #FFF;
@@ -3497,6 +3503,9 @@ span.ng {
         @media screen and (max-width: 667px) {
           .header .header-bottom .header-links > a {
             margin-left: 0; } }
+        @media screen and (max-width: 375px) {
+          .header .header-bottom .header-links > a {
+            margin-right: 0; } }
       .header .header-bottom .header-links span {
         vertical-align: -moz-middle-with-baseline; }
       .header .header-bottom .header-links .mail {
@@ -3539,7 +3548,12 @@ span.ng {
           height: 54px; } }
       .header .header-bottom .headhesive .logo {
         margin-right: 16px;
-        float: left; }
+        float: left;
+        width: 110px;
+        margin-top: 5px; }
+        @media screen and (max-width: 1087px) {
+          .header .header-bottom .headhesive .logo {
+            width: 88px; } }
     .header .header-bottom .headhesive--stick {
       display: block; }
     .header .header-bottom .hidden-header {
@@ -3614,12 +3628,12 @@ span.ng {
     .footer-container a:hover {
       color: black; }
   .footer-container .footer {
-    background: url("/assets/images/tmp/bg.svg") repeat-x;
+    background: url("/assets/images/bg.svg") repeat-x;
     height: 712px;
     padding: 1px; }
     @media screen and (max-width: 1087px) {
       .footer-container .footer {
-        background: url("/assets/images/tmp/bg-mob.svg") repeat-x 16px 0;
+        background: url("/assets/images/bg-mob.svg") repeat-x 16px 0;
         height: 592px; } }
     .footer-container .footer > a:hover {
       opacity: 0.8; }

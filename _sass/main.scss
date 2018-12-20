@@ -33,16 +33,16 @@ span.ng{color: $color-ng; font-weight: bold;}
   max-height: $max-height-of-head;
 
   .header-top {
-    padding: $offset-xl2 0 0 $offset-xl;
+    padding: $offset-xxxl2 0 0 $offset-xxl;
     @include until($desktop) {
       padding: $offset-l;
     }
   }
 
   .logo img{
-    width: 203px;
+    width: 268px;
     @include until($desktop){
-      width:105px;
+      width:140px;
     }
   }
 
@@ -54,15 +54,23 @@ span.ng{color: $color-ng; font-weight: bold;}
       font-size: $font-size-m;
       padding: $offset-l 25px 0 0;
     }
+    @include until($mobile667) {
+      padding: $offset-l $offset-l 0 0;
+    }
 
     a {
-      color: $color-white;
+      color: $color-gray-dark;
       text-decoration: underline;
     }
 
     span {
       margin-right: 10px;
-      color: $color-gray-dark;
+      color: $color-white;
+    }
+
+    a + span{
+      margin-left: 10px;
+      margin-right: 0;
     }
   }
 
@@ -127,6 +135,9 @@ span.ng{color: $color-ng; font-weight: bold;}
         @include until($mobile667) {
           margin-left: 0;
         }
+        @include until($mobile375) {
+          margin-right: 0;
+        }
       }
 
       span {
@@ -189,6 +200,11 @@ span.ng{color: $color-ng; font-weight: bold;}
       .logo {
         margin-right: $offset-l;
         float: left;
+        width: 110px;
+        margin-top: 5px;
+        @include until($desktop){
+          width: 88px;
+        }
       }
     }
 
@@ -306,12 +322,12 @@ span.ng{color: $color-ng; font-weight: bold;}
   }
 
   .footer {
-    background: url("/assets/images/tmp/bg.svg") repeat-x;
+    background: url("/assets/images/bg.svg") repeat-x;
     height: 712px;
     padding: 1px;
 
     @include until($desktop) {
-      background: url("/assets/images/tmp/bg-mob.svg") repeat-x $offset-l 0;
+      background: url("/assets/images/bg-mob.svg") repeat-x $offset-l 0;
       height: 592px;
     }
 
