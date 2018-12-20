@@ -1,9 +1,13 @@
 <a href="{{site.t[page.lang].whitepaperurl}}" class="whitepaper tall">Whitepaper</a>
-<a href="{{page.url_telegram}}" class="is-hidden-desktop1024 telegram tall">Telegram</a>
-<a href="{{page.url_medium}}" class="is-hidden-desktop1024 tall">Medium</a>
+{% if page.lang!='en' %}
+    <a href="{{page.url_telegram}}" class="is-hidden-desktop1024 telegram tall">Telegram</a>
+    <a href="{{page.url_medium}}" class="is-hidden-desktop1024 tall">Medium</a>
+{% endif %}
 
 <a href="mailto:{{page.url_email}}"><div class="is-pulled-right mail">{{page.url_email}}</div></a>
-<div class="is-pulled-right brands is-hidden-mobile456 is-hidden-from-desktop1024">
-    <a href="{{page.url_medium}}"><i class="fab fa-medium"></i></a>
-    <a href="{{page.url_telegram}}"> <i class="fab fa-telegram"></i></a>
-</div>
+{% if page.lang!='en' %}
+    <div class="is-pulled-right brands is-hidden-mobile456 is-hidden-from-desktop1024">
+        <a href="{{page.url_medium}}"><i class="fab fa-medium"></i></a>
+        <a href="{{page.url_telegram}}"> <i class="fab fa-telegram"></i></a>
+    </div>
+{% endif %}

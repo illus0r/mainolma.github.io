@@ -1,6 +1,8 @@
 <div class="footer">
-    <a href="{{page.url_medium}}"><div class="footer-rect-medium"></div></a>
-    <a href="{{page.url_telegram}}"><div class="footer-rect-telegram"></div></a>
+    {% if page.lang!='en' %}
+        <a href="{{page.url_medium}}"><div class="footer-rect-medium"></div></a>
+        <a href="{{page.url_telegram}}"><div class="footer-rect-telegram"></div></a>
+    {% endif %}
     <div class="columns is-desktop">
         <div class="column">
             <span>{{site.t[page.lang].fulldescription}}</span><br>
