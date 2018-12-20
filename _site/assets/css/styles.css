@@ -3554,6 +3554,9 @@ span.ng {
         @media screen and (max-width: 1087px) {
           .header .header-bottom .headhesive .logo {
             width: 88px; } }
+        @media screen and (min-width: 1088px) {
+          .header .header-bottom .headhesive .logo {
+            margin-top: 1px; } }
     .header .header-bottom .headhesive--stick {
       display: block; }
     .header .header-bottom .hidden-header {
