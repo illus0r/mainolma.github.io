@@ -2,13 +2,13 @@ collections:
   sections:
     output: true
 
-email: info@ideaproject.tech
+email: info@idea-go.tech
 
 t:
   ru:
     hello: 'Привет:)'
     learnmore: 'Узнайте больше:'
-    head: '<span><b>Internet of Decentrаlized Energy Architecture&nbsp;</b>—<br> тип децентра&shy;лизованной электроэнергетической системы, в которой реализовано интеллектуальное распределенное управление, осуществляемое за счет энергетических трансакций между ее пользователями.</span>'
+    head: '<span><b>Internet of Distributed Energy Architecture&nbsp;</b><br>Архитектура Интернета энергии&nbsp;— тип&nbsp;децентра&shy;лизованной электроэнергетической системы, в которой реализовано интеллектуальное распределенное управление, осуществляемое за счет энергетических трансакций между ее пользователями.</span>'
     principi: 'Принципы построения энергосистем в архитектуре Интернета энергии IDEA'
     fulldescription: 'Полное описание ­ архитектуры IDEA —'
     writetous: 'Пишите, будем рады ответить:'
