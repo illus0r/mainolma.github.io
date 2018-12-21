@@ -396,8 +396,14 @@ span.ng{color: $color-ng; font-weight: bold;}
   /* Under footer - copyrights etc*/
 
   .basement{
-    padding: 1px;
-    width: $desktop1440;
+    max-width: $fullhd;
+    margin: 0 auto;
+    padding: 0 37px;
+    @include until($desktop) {
+      padding: $offset-l;
+    }
+    //padding: 1px;
+    //width: $desktop1440;
 
     @include until($desktop1440) {
       width: 100%;
@@ -410,10 +416,10 @@ span.ng{color: $color-ng; font-weight: bold;}
     margin: 0 auto;
 
     .columns{
-      padding: 0 $offset-xl;
+      //padding: 0 $offset-xl;
 
       @include until($desktop1440) {
-        padding: 0 $offset-l;
+        //padding: 0 $offset-l;
       }
     }
 
