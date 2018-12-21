@@ -138,7 +138,10 @@ function drawGraph() {
 
     //load svg content from external svg
 
-    d3.xml("assets/images/idea-scheme.svg").then(function(documentFragment,error) {
+    var local=document.documentElement.lang
+    var file = (local=='ru') ? "assets/images/idea-scheme-ru.svg" : "assets/images/idea-scheme-en.svg"
+
+    d3.xml(file).then(function(documentFragment,error) {
         if (error) {console.log(error); return;}
         var svgNode = documentFragment
             .getElementsByTagName("svg")[0];
