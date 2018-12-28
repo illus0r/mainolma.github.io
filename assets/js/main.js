@@ -84,10 +84,12 @@ function updateCanvas(canvasName, divName) {
 
 function headhesive() {
     if (window.pageYOffset >= $('.header-links').offset().top) {
-        $('.headhesive')
-            .removeClass('headhesive--unstick')
-            .addClass('headhesive--stick');
-        updateCanvas("canvas-sticky", "headhesive");
+        if ($('.headhesive').hasClass("headhesive--unstick")){
+            $('.headhesive')
+                .removeClass('headhesive--unstick')
+                .addClass('headhesive--stick');
+            updateCanvas("canvas-sticky", "headhesive");
+        }
     } else {
         $('.headhesive').css('background', 'transparent')
             .removeClass('headhesive--stick')
