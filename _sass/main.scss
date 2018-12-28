@@ -217,7 +217,8 @@ span.ng{color: $color-ng; font-weight: bold;}
 
     .hidden-header {
       //display: none;
-      opacity:0;
+      //opacity:0;
+      visibility: hidden;
     }
   }
 
