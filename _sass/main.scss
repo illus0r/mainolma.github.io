@@ -304,6 +304,10 @@ span.ng{color: $color-ng; font-weight: bold;}
 
   #graph-container {
     @include until($mobile456) {
+      position: -webkit-sticky;
+      position: -moz-sticky;
+      position: -o-sticky;
+      position: -ms-sticky;
       position: sticky;
       top: 50px;
       background: $color-white;
