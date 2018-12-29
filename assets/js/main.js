@@ -1,3 +1,7 @@
+/*stickyfill*/
+var elements = document.querySelectorAll('#graph');
+    Stickyfill.add(elements);
+
 /*init*/
 
 document.addEventListener("DOMContentLoaded", init);
