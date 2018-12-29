@@ -1,7 +1,3 @@
-/*stickyfill*/
-var elements = document.querySelectorAll('#graph');
-    Stickyfill.add(elements);
-
 /*init*/
 
 document.addEventListener("DOMContentLoaded", init);
@@ -99,6 +95,10 @@ function headhesive() {
             .removeClass('headhesive--stick')
             .addClass('headhesive--unstick');
     }
+    
+    /*stickyfill*/
+    var elements = document.querySelectorAll('#graph');
+    Stickyfill.add(elements);
 
     //hide it near footer
 
